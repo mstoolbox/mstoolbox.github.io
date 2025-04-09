@@ -23,78 +23,82 @@ function b2a(a,b,c,x)
 
 <CENTER>
 <FORM NAME='myform'>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='500'>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='480'>
 <TR BGCOLOR="#EEEEEE"><TH><TT>Fahrenheit</TT></TH><TH>&nbsp;</TH><TH><TT>Celcius</TT></TH></TR>
 <TR BGCOLOR="#EEEEEE">
 <TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="afar"></TD>
 <TD ALIGN="center"><INPUT TYPE="button" VALUE=" to C => " ONCLICK="acel.value=a2b(32,5/9,100,afar.value)"><BR><INPUT TYPE="button" VALUE=" <= to F " ONCLICK="afar.value=b2a(32,9/5,100,acel.value)"></TD>
 <TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="acel"></TD>
 </TR></TABLE>
-
+  
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='480'>
 <TR BGCOLOR="#EEEEEE"><TH><TT>miles</TT><TH>&nbsp;<TH><TT>kilometers</TT></TH></TR>
 <TR BGCOLOR="#EEEEEE">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="amil">
+<TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="amil">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to km =>  " ONCLICK="akm.value=a2b(0,1.6093,100,amil.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to miles " ONCLICK="amil.value=a2b(0,1/1.6093,100,akm.value)">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="akm">
+<TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="akm">
 </TR></TABLE>
 
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='480'>
 <TR BGCOLOR="#EEEEEE"><TH><TT>inches</TT><TH>&nbsp;<TH><TT>centimeters</TT></TH></TR>
 <TR BGCOLOR="#EEEEEE">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="ain">
+<TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="ain">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to cm =>  " ONCLICK="acm.value=a2b(0,2.54,1000,ain.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to in " ONCLICK="ain.value=a2b(0,1/2.54,1000,acm.value)">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="acm">
+<TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="acm">
 </TR></TABLE>
+  
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='480'>
 <TR BGCOLOR="#EEEEEE"><TH><TT>ounce</TT><TH>&nbsp;<TH><TT>gram</TT></TH></TR>
 <TR BGCOLOR="#EEEEEE">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="oz">
+<TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="oz">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to gram =>  " ONCLICK="gr.value=a2b(0,28.35,100,oz.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to ounces " ONCLICK="oz.value=a2b(0,1/28.35,1000,gr.value)">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="gr">
+<TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="gr">
 </TR></TABLE>
+  
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='480'>
 <TR BGCOLOR="#EEEEEE"><TH><TT>pounds</TT><TH>&nbsp;<TH><TT>kilogram</TT></TH></TR>
 <TR BGCOLOR="#EEEEEE">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="lb">
+<TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="lb">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to kilogram =>  " ONCLICK="kg.value=a2b(0,1/2.2046,100,lb.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to pounds " ONCLICK="lb.value=a2b(0,2.2046,100,kg.value)">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="kg">
+<TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="kg">
 </TR></TABLE>
+  
 <P>
-
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='480'>
 <TR BGCOLOR="#EEEEEE"><TH><TT>fl oz</TT><TH>&nbsp;<TH><TT>ml</TT></TH></TR>
 <TR BGCOLOR="#EEEEEE">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="floz">
+<TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="floz">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to ml =>  " ONCLICK="ml.value=a2b(0,29.574,100,floz.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to fl oz " ONCLICK="floz.value=a2b(0,1/29.574,1000,ml.value)">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="ml">
+<TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="ml">
 </TR></TABLE>
+  
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='480'>
 <TR BGCOLOR="#EEEEEE"><TH><TT>gallon</TT><TH>&nbsp;<TH><TT>liter</TT></TH></TR>
 <TR BGCOLOR="#EEEEEE">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="gal">
+<TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="gal">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to liter =>  " ONCLICK="lit.value=a2b(0,3.7854,100,gal.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to gallon " ONCLICK="gal.value=a2b(0,1/3.7854,100,lit.value)">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="lit">
+<TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="lit">
 </TR></TABLE>
+  
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='480'>
 <TR BGCOLOR="#EEEEEE"><TH><TT>psi</TT><TH>&nbsp;<TH><TT>bar</TT></TH></TR>
 <TR BGCOLOR="#EEEEEE">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="psi">
+<TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="psi">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to bar =>  " ONCLICK="bar.value=a2b(0,1/14.223343,100,psi.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to psi " ONCLICK="psi.value=a2b(0,14.223343,100,bar.value)">
-<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="bar">
+<TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="bar">
 </TR></TABLE>
 
 </FORM>
