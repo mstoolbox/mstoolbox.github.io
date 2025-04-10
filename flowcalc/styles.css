@@ -1,0 +1,9 @@
+.small {font-family:courier new,courier;font-size:10pt;color:#000080;}
+.w, .b, .g, BODY, TD, UL {font-family:verdana,tahoma,arial,helvetica;}
+.w {font-size:11pt;color:#FFFFFF;font-weight:bold;}
+.b, .g, BODY, TD, UL {font-size:9pt;color:#000080;}
+LI {list-style-type: square;}
+A {text-decoration:none;}
+A:link {color:#800000;}
+A:visited, .g {color:#DF8080;}
+A:hover {color:#800000;text-decoration: underline;}
