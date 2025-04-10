@@ -1,0 +1,88 @@
+<HTML><HEAD><TITLE>TubeCalc</TITLE><LINK REL="stylesheet" HREF="tubecalc.css">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var dd,ll,vv;
+
+function myformat(nr)
+{
+//not implemented at this moment
+return nr;
+}
+
+function calcdiam()
+{
+vv = document.myform.avol.value * document.myform.units3[document.myform.units3.selectedIndex].value;
+ll = document.myform.alength.value  * document.myform.units2[document.myform.units2.selectedIndex].value;
+dd = 2 * Math.sqrt(vv / Math.PI / ll) / document.myform.units1[document.myform.units1.selectedIndex].value;
+document.myform.adiam.value = myformat(dd);
+}
+
+function calclength()
+{
+dd = document.myform.adiam.value * document.myform.units1[document.myform.units1.selectedIndex].value;
+vv = document.myform.avol.value * document.myform.units3[document.myform.units3.selectedIndex].value;
+ll = vv / (Math.PI * (dd/2) * (dd/2)) / document.myform.units2[document.myform.units2.selectedIndex].value;
+document.myform.alength.value = myformat(ll);
+}
+
+function calcvol()
+{
+dd = document.myform.adiam.value * document.myform.units1[document.myform.units1.selectedIndex].value;
+ll = document.myform.alength.value  * document.myform.units2[document.myform.units2.selectedIndex].value;
+vv = Math.PI * (dd/2) * (dd/2) * ll / document.myform.units3[document.myform.units3.selectedIndex].value;
+document.myform.avol.value = myformat(vv);
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#CCCCCC" TEXT="#000000" LINK="#0000FF" VLINK="#7777FF" ALINK="#FFFFFF">
+<TABLE BORDER=0 WIDTH="100%"><TR BGCOLOR="#EEEEEE"><TD HEIGHT=25 ALIGN='center' CLASS='tit'>tube volume calculator</TD></TR></TABLE><P><TT>
+
+<CENTER>
+<FORM NAME="myform">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TR BGCOLOR="#EEEEEE"><TH><TT>diameter</TT></TH><TH><TT>length</TT></TH><TH><TT>volume</TT></TH></TR>
+
+<TR BGCOLOR="#EEEEEE">
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="adiam">
+<SELECT NAME="units1" SIZE=1>
+<OPTION VALUE = 0.001>um</OPTION>
+<OPTION VALUE = 1 SELECTED>mm</OPTION>
+<OPTION VALUE = 10>cm</OPTION>
+<OPTION VALUE = 1000>m</OPTION>
+<OPTION VALUE = 25.4>inch</OPTION>
+</SELECT>
+</TD>
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="alength">
+<SELECT NAME="units2" SIZE=1>
+
+<OPTION VALUE = 0.001>um</OPTION>
+<OPTION VALUE = 1 SELECTED>mm</OPTION>
+<OPTION VALUE = 10>cm</OPTION>
+<OPTION VALUE = 1000>m</OPTION>
+<OPTION VALUE = 25.4>inch</OPTION>
+</SELECT>
+</TD>
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="avol">
+<SELECT NAME="units3" SIZE=1>
+<OPTION VALUE = 0.001>nL</OPTION>
+<OPTION VALUE = 1 SELECTED>uL</OPTION>
+
+<OPTION VALUE = 1000>mL</OPTION>
+<OPTION VALUE = 1000000>L</OPTION>
+</SELECT>
+</TD>
+</TR>
+<TR BGCOLOR="#EEEEEE">
+<TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc DIAM " ONCLICK="calcdiam()"></TD>
+<TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc LENGTH " ONCLICK="calclength()"></TD>
+<TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc VOLUME " ONCLICK="calcvol()"></TD>
+</TR>
+</TABLE>
+</FORM>
+</CENTER>
+
+</BODY></HTML>
