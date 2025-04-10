@@ -1,0 +1,113 @@
+<HTML><HEAD><TITLE>FlowCalc</TITLE><LINK REL="stylesheet" HREF="styles.css">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var ff;
+
+function myformat(nr)
+{
+//not implemented at this moment
+var xx,ii,jj,ll,outstr;
+
+outstr = "";
+jj=0;
+ii=0;
+kk=0;
+
+if (("0"+nr).indexOf(".") > 0) {
+  nr = nr + "0";
+  }
+else {
+  nr = nr + ".";
+  }
+ll = nr.length;
+
+for (xx = 0; xx <= ll-2; xx++) {
+  if (".".indexOf(nr.charAt(xx)) >= 0) {
+    kk++;
+    }
+  if ((jj == 0) && ("123456789".indexOf(nr.charAt(xx)) >= 0)) {
+    jj = 1;
+    }
+  if ((jj == 1) && ("0123456789".indexOf(nr.charAt(xx)) >= 0)) {
+    ii++;
+    }
+  if ((ii * kk) >= 5) {
+    break;
+    }
+  outstr += nr.charAt(xx);
+  }
+return outstr;
+}
+
+function calcflow()
+{
+ff = document.myform.newdiam.value * document.myform.newdiamu[document.myform.newdiamu.selectedIndex].value;
+ff = ff / (document.myform.olddiam.value * document.myform.olddiamu[document.myform.olddiamu.selectedIndex].value);
+ff = Math.pow(ff,2) * document.myform.oldflow.value * document.myform.oldflowu[document.myform.oldflowu.selectedIndex].value;
+document.myform.newflow.value = myformat(ff * document.myform.newflowu[document.myform.newflowu.selectedIndex].value);
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#CCCCCC" TEXT="#000000" LINK="#0000FF" VLINK="#7777FF" ALINK="#FFFFFF">
+<TABLE BORDER=0 WIDTH="100%"><TR BGCOLOR="#EEEEEE"><TD HEIGHT=25 ALIGN='center' CLASS='tit'>flow rate calculator</TD></TR></TABLE><P><TT>
+
+<CENTER>
+<FORM NAME="myform">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TR BGCOLOR="#EEEEEE"><TH><TT>old diameter</TT></TH><TH><TT>old flow</TT></TH><TH><TT>new diameter</TT></TH><TH><TT>new flow</TT></TH></TR>
+
+<TR BGCOLOR="#EEEEEE">
+<TD><INPUT TYPE="text" SIZE=10 VALUE="4.6" NAME="olddiam">
+<SELECT NAME="olddiamu" SIZE=1>
+<OPTION VALUE = 1000>m</OPTION>
+<OPTION VALUE = 10>cm</OPTION>
+<OPTION VALUE = 1 SELECTED>mm</OPTION>
+<OPTION VALUE = 0.001>um</OPTION>
+</SELECT>
+</TD>
+
+<TD><INPUT TYPE="text" SIZE=10 VALUE="1" NAME="oldflow">
+<SELECT NAME="oldflowu" SIZE=1>
+<OPTION VALUE = 1000>uL/min</OPTION>
+<OPTION VALUE = 60000>uL/H</OPTION>
+<OPTION VALUE = 1 SELECTED>mL/min</OPTION>
+<OPTION VALUE = 60>mL/H</OPTION>
+<OPTION VALUE = 0.06>l/H</OPTION>
+</SELECT>
+</TD>
+
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="newdiam">
+<SELECT NAME="newdiamu" SIZE=1>
+<OPTION VALUE = 1000>m</OPTION>
+<OPTION VALUE = 10>cm</OPTION>
+<OPTION VALUE = 1 SELECTED>mm</OPTION>
+<OPTION VALUE = 0.001>um</OPTION>
+</SELECT>
+</TD>
+
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="newflow">
+<SELECT NAME="newflowu" SIZE=1>
+<OPTION VALUE = 1000>uL/min</OPTION>
+<OPTION VALUE = 60000>uL/H</OPTION>
+<OPTION VALUE = 1 SELECTED>mL/min</OPTION>
+<OPTION VALUE = 60>mL/H</OPTION>
+<OPTION VALUE = 0.06>l/H</OPTION>
+</SELECT>
+</TD>
+</TR>
+
+<TR BGCOLOR="#EEEEEE">
+<TD ALIGN="center">&nbsp;</TD>
+<TD ALIGN="center">&nbsp;</TD>
+<TD ALIGN="center">&nbsp;</TD>
+<TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc FLOW " ONCLICK="calcflow()"></TD>
+</TR>
+</TABLE>
+</FORM>
+</CENTER>
+
+</BODY></HTML>
