@@ -1,0 +1,88 @@
+<HTML><HEAD><TITLE>ConcCalc</TITLE><LINK REL='stylesheet' HREF='styles.css'>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var cc,ww,vv,xx;
+
+function myformat(nr)
+{
+//not implemented at this moment
+return nr;
+}
+
+function calcconc()
+{
+vv = document.myform.avol.value * document.myform.units3[document.myform.units3.selectedIndex].value;
+ww = document.myform.aweight.value  * document.myform.units2[document.myform.units2.selectedIndex].value;
+xx = (document.myform.units1[document.myform.units1.selectedIndex].value < 0?10:document.myform.amass.value*document.myform.units1[document.myform.units1.selectedIndex].value);
+cc = ww/vv/xx;
+document.myform.aconc.value = myformat(cc);
+}
+
+function calcweight()
+{
+vv = document.myform.avol.value * document.myform.units3[document.myform.units3.selectedIndex].value;
+xx = (document.myform.units1[document.myform.units1.selectedIndex].value < 0?10:document.myform.units1[document.myform.units1.selectedIndex].value*document.myform.amass.value);
+cc = document.myform.aconc.value;
+ww = cc * xx * vv / document.myform.units2[document.myform.units2.selectedIndex].value;
+document.myform.aweight.value = myformat(ww);
+}
+
+function calcvol()
+{
+ww = document.myform.aweight.value  * document.myform.units2[document.myform.units2.selectedIndex].value;
+cc = document.myform.aconc.value  * document.myform.units1[document.myform.units1.selectedIndex].value;
+xx = (document.myform.units1[document.myform.units1.selectedIndex].value < 0?10:document.myform.amass.value);
+vv = ww / cc / xx / document.myform.units3[document.myform.units3.selectedIndex].value;
+document.myform.avol.value = myformat(vv);
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#CCCCCC" TEXT="#000000" LINK="#0000FF" VLINK="#7777FF" ALINK="#FFFFFF">
+<TABLE BORDER=0 WIDTH="100%"><TR BGCOLOR="#EEEEEE"><TD HEIGHT=25 ALIGN='center' CLASS='tit'>concentration calculator</TD></TR></TABLE><P><TT>
+
+<CENTER>
+<FORM NAME="myform">
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<TR BGCOLOR="#EEEEEE"><TH><TT>mol weight</TT></TH><TH><TT>concentration</TT></TH><TH><TT>weight</TT></TH><TH><TT>volume</TT></TH></TR>
+
+<TR BGCOLOR="#EEEEEE">
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="amass"></TD>
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="aconc">
+<SELECT NAME="units1" SIZE=1>
+<OPTION VALUE = 1 SELECTED>M</OPTION>
+<OPTION VALUE = 0.001>mM</OPTION>
+<OPTION VALUE = 0.000001>uM</OPTION>
+<OPTION VALUE = -1>%</OPTION>
+</SELECT>
+</TD>
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="aweight">
+<SELECT NAME="units2" SIZE=1>
+<OPTION VALUE = 1 SELECTED>g</OPTION>
+
+<OPTION VALUE = 0.001>mg</OPTION>
+<OPTION VALUE = 0.000001>ug</OPTION>
+</SELECT>
+</TD>
+<TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="avol">
+<SELECT NAME="units3" SIZE=1>
+<OPTION VALUE = 1 SELECTED>L</OPTION>
+<OPTION VALUE = 0.001>mL</OPTION>
+<OPTION VALUE = 0.000001>uL</OPTION>
+</SELECT>
+</TD>
+</TR>
+
+<TR BGCOLOR="#EEEEEE">
+<TD>&nbsp;</TD>
+<TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc CONC " ONCLICK="calcconc()"></TD>
+<TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc WEIGHT " ONCLICK="calcweight()"></TD>
+<TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc VOLUME " ONCLICK="calcvol()"></TD>
+</TR>
+</TABLE>
+</FORM>
+</CENTER>
+</BODY></HTML>
