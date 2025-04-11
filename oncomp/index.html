@@ -1,0 +1,80 @@
+<HTML>
+<HEAD><TITLE>Oligo Composition Calculator v1.2</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="oncomp.js">
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFF99" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#FFFFFF"
+onLoad="window.status='Welcome to Oligo Composition Calculator';SetDefault();">
+<H1>Oligo Composition Calculator v1.2</H1>
+<NOSCRIPT><B>Note :</B> JavaScript has to be enabled in your browser.<P></NOSCRIPT>
+<FORM NAME='inp'>
+<TABLE BORDER=0 BGCOLOR="#77CCCC" CELLPADDING="2">
+<TR BGCOLOR="#55BBBB"> 
+  <TD COLSPAN=5 HEIGHT=50><B>Target mass: </B>
+  <INPUT NAME="mw" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(1)">
+  <B>&nbsp;+/-&nbsp;</B>
+  <INPUT NAME="toler" TYPE="text" SIZE=5 VALUE=1.0 OnFocus="SetStatus(2)">&nbsp;
+  <INPUT VALUE="  GO  " TYPE="button" OnClick='DoCalc()'>&nbsp;
+  <INPUT VALUE=" CLEAR " TYPE="button" OnClick="SetDefault()"></TD>
+</TR><TR>
+  <TH WIDTH=50>&nbsp;<TH WIDTH=100>mass<TH WIDTH=75>min<TH WIDTH=75>max<TH WIDTH=200>options
+</TR><TR>
+  <TD ALIGN=right><B>C: </B>
+  <TD><INPUT NAME="C" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)">
+  <TD><INPUT NAME="minC" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxC" TYPE="text" SIZE=5 VALUE=5 OnFocus="SetStatus(6,this.name)">
+<TD ROWSPAN=8>
+<INPUT NAME="ma" TYPE="radio" VALUE="A" CHECKED OnClick='SetBase()'>average mass<BR>
+<INPUT NAME="ma" TYPE="radio" VALUE="M" OnClick='SetBase()'>monoisotopic mass<P>
+<INPUT NAME="dr" TYPE="radio" VALUE="DNA" CHECKED OnClick='SetBase()'>DNA<BR>
+<INPUT NAME="dr" TYPE="radio" VALUE="RNA" OnClick='SetBase()'>RNA<P>
+<INPUT NAME="ph" TYPE="radio" VALUE=0 CHECKED>no terminal phosphates<BR>
+<INPUT NAME="ph" TYPE="radio" VALUE=1>1 phosphate<BR>
+<INPUT NAME="ph" TYPE="radio" VALUE=2>2 phosphates<BR>
+<INPUT NAME="ph" TYPE="radio" VALUE=3>1 phosphate, 1 cyclic<BR>
+<INPUT NAME="ph" TYPE="radio" VALUE=4>allow all possibilities<BR>
+</SELECT>
+<P>
+offset mass
+<INPUT NAME="offs" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(3)">
+</TR><TR>
+  <TD ALIGN=right><B>U: </B>
+  <TD><INPUT NAME="U" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)">
+  <TD><INPUT NAME="minU" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxU" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>T: </B>
+  <TD><INPUT NAME="T" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)">
+  <TD><INPUT NAME="minT" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxT" TYPE="text" SIZE=5 VALUE=5 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>A: </B>
+  <TD><INPUT NAME="A" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)">
+  <TD><INPUT NAME="minA" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxA" TYPE="text" SIZE=5 VALUE=5 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>G: </B>
+  <TD><INPUT NAME="G" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)">
+  <TD><INPUT NAME="minG" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxG" TYPE="text" SIZE=5 VALUE=5 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>user X: </B>
+  <TD><INPUT NAME="X" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(4)">
+  <TD><INPUT NAME="minX" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxX" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>user Y: </B>
+  <TD><INPUT NAME="Y" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(4)">
+  <TD><INPUT NAME="minY" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxY" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>user Z: </B>
+  <TD><INPUT NAME="Z" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(4)">
+  <TD><INPUT NAME="minZ" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxZ" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR></TABLE>
+</FORM>
+<I><FONT SIZE=2>written by <A HREF='http://jef.i.am'>Jef Rozenski</A> (1999)<BR>
+visit the <A HREF='https://mstools.github.io'>Masspec Toolbox</A></FONT></I>
+<BODY>
+</HTML>
