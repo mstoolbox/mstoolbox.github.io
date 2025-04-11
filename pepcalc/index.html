@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript" SRC="pepcalc.js">
+</SCRIPT>
+<TITLE>Peptide Mass Calculator v3.2</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FF9999" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#FFFFFF"
+onLoad="window.status='Welcome to Peptide Mass Calculator';">
+<H1>Peptide Mass Calculator v3.2</H1>
+<NOSCRIPT>
+<B>Note :</B> JavaScript has to be enabled in your browser.<P>
+</NOSCRIPT>
+<FORM NAME="inp">
+<TABLE BORDER=0 WIDTH=630 CELLPADDING=5 BGCOLOR="#CC99AA">
+</TR><TR>
+<TD VALIGN='top'><TT><B>Sequence (C-terminal -> N-terminal):</B><BR>
+<TEXTAREA NAME="sq" ROWS=3 COLS=70 WRAP='virtual'></TEXTAREA></TD>
+</TR><TR>
+<TD><TT><B>N-terminal group:</B>
+<SELECT NAME="tn">
+<OPTION VALUE="H">free amine</OPTION>
+<OPTION VALUE="A">acetyl</OPTION>
+<OPTION VALUE="F">formyl</OPTION>
+<OPTION VALUE="P">pyroglutamate</OPTION>
+<OPTION VALUE="X">other -------></OPTION>
+</SELECT>
+<INPUT TYPE="text" NAME="u9" SIZE=10><BR>
+<B>C-terminal group:</B>
+<SELECT NAME="tc">
+<OPTION VALUE="O">acid</OPTION>
+<OPTION VALUE="M">amide</OPTION>
+<OPTION VALUE="Y">other -------></OPTION>
+</SELECT>
+<INPUT TYPE="text" NAME="u0" SIZE=10>
+</TD>
+</TR><TR>
+<TD><TT><B>User defined residues:</B><P><CENTER>
+1: <INPUT TYPE="text" NAME="u1" SIZE=10> 5: <INPUT TYPE="text" NAME="u5" SIZE=10><BR>
+2: <INPUT TYPE="text" NAME="u2" SIZE=10> 6: <INPUT TYPE="text" NAME="u6" SIZE=10><BR>
+3: <INPUT TYPE="text" NAME="u3" SIZE=10> 7: <INPUT TYPE="text" NAME="u7" SIZE=10><BR>
+4: <INPUT TYPE="text" NAME="u4" SIZE=10> 8: <INPUT TYPE="text" NAME="u8" SIZE=10><BR></CENTER>
+</TD>
+</TR><TR>
+<TD>
+<TT>Calculate
+<SELECT NAME="calc">
+<OPTION>molecular mass</OPTION>
+<OPTION>[M+H]+</OPTION>
+<OPTION>ES series positive mode</OPTION>
+<OPTION>ES series negative mode</OPTION>
+</SELECT>
+using
+<SELECT NAME="ma">
+<OPTION VALUE="A">average masses</OPTION>
+<OPTION VALUE="M">monoisotopic masses</OPTION>
+</SELECT>
+</TD>
+</TR><TR ALIGN="center">
+<TD>
+<TT><INPUT TYPE="button" VALUE="  GO  " ONCLICK="DoCalc()">
+<INPUT TYPE="reset" VALUE=" CLEAR FORM ">
+<INPUT TYPE="button" VALUE="  RESIDUE LIST  " ONCLICK="showres()">
+</TD>
+</TR><TR>
+<TD>
+<DL COMPACT>
+<DT>Note:<DD>Use one-character symbols for amino acids (V = valine, ...) or enter a user-defined residue (numbers 1-8).
+For N- and C-terminal groups: see predefined list, or select [other] and enter a mass.
+</DL>
+</TD>
+</TR>
+</TABLE>
+</FORM>
+<I><FONT SIZE=2>written by Jef Rozenski (1999)<BR>
+<A HREF='https://mstoolbox.github.io'>Masspec Toobox</A></FONT></I>
+</BODY>
+</HTML>
