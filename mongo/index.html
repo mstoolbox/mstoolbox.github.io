@@ -1,0 +1,100 @@
+<HTML>
+<HEAD><TITLE>Mongo Oligo Mass Calculator v2.06</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="mongo.min.js"></SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#C0DFB0" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#FFFFFF"
+onLoad="window.status='Welcome to Mongo Oligo Mass Calculator';document.forms[0].seq.value=mytrans(document.location.search.substring(1));">
+<H1>Mongo Oligo Mass Calculator v2.06</H1>
+<NOSCRIPT>
+<B>Note :</B> JavaScript has to be enabled in your browser.<P>
+</NOSCRIPT>
+<FORM>
+<TABLE BORDER=0 BGCOLOR="#FFFFC0" CELLPADDING=5 CELLSPACING=1 WIDTH=750>
+<TR><TD COLSPAN=3>
+<B>Sequence (5'-->3')</B><BR>
+<TEXTAREA NAME="seq" TYPE="text" WRAP=virtual ROWS=2 COLS=60
+OnFocus="SetStatus(1);this.select()"></TEXTAREA><BR>
+<INPUT TYPE="button" VALUE=" DNA2RNA " onClick="DNA2RNA()">
+<INPUT TYPE="button" VALUE=" RNA2DNA " onClick="RNA2DNA()">
+<INPUT TYPE="button" VALUE=" CleanUp " onClick="cleanseq()">
+<INPUT TYPE="button" VALUE=" Clear sequence " onClick="document.forms[0].seq.value = ''">
+
+</TD>
+<TD VALIGN="bottom">
+<B>Memories</B><BR>
+<SELECT NAME="selmem" SIZE=1 OnFocus="SetStatus(14)">
+<OPTION>select a memory location -----></OPTION>
+<OPTION VALUE="">1: (empty)</OPTION>
+<OPTION VALUE="">2: (empty)</OPTION>
+<OPTION VALUE="">3: (empty)</OPTION>
+<OPTION VALUE="">4: (empty)</OPTION>
+<OPTION VALUE="">5: (empty)</OPTION>
+</SELECT>
+<BR>
+<INPUT TYPE="button" VALUE=" copy " OnClick="storeit()">
+<INPUT TYPE="button" VALUE=" paste " OnClick="restoreit()">
+<INPUT TYPE="button" VALUE=" clear all " OnClick="clearit()"></TD>
+</TR>
+<TR><TD VALIGN="top">
+<B>Calculation</B><BR>
+<SELECT NAME="sel" SIZE=11 MULTIPLE OnFocus="SetStatus(13)">
+<OPTION VALUE="molecular mass" SELECTED>molecular mass</OPTION>
+<OPTION VALUE="electrospray series">electrospray series</OPTION>
+<OPTION VALUE="CID fragments">CID fragments</OPTION>
+<OPTION VALUE="internal fragments">internal fragments</OPTION>
+<OPTION VALUE="base losses">base losses</OPTION>
+<OPTION VALUE="RNase T1 digest">RNase T1 digest</OPTION>
+<OPTION VALUE="RNase U2 digest">RNase U2 digest</OPTION>
+<OPTION VALUE="RNase A digest">RNase A digest</OPTION>
+<OPTION VALUE="5' exonuclease digest">5' exonuclease digest</OPTION>
+<OPTION VALUE="3' exonuclease digest">3' exonuclease digest</OPTION>
+<OPTION VALUE="modified bases list">modified bases list</OPTION>
+</SELECT></TD>
+<TD VALIGN=top WIDTH=150>
+<B>Options</B><BR>
+<INPUT NAME="ma" TYPE="radio" VALUE="A" CHECKED OnFocus="SetStatus(2)">average mass<BR>
+<INPUT NAME="ma" TYPE="radio" VALUE="M" OnFocus="SetStatus(3)">monoisotopic mass<P>
+<INPUT NAME="md" TYPE="radio" VALUE=-1 CHECKED OnFocus="SetStatus(4)">negative mode<BR>
+<INPUT NAME="md" TYPE="radio" VALUE=1 OnFocus="SetStatus(4)">positive mode<P>
+<INPUT NAME="dr" TYPE="radio" VALUE="DNA" CHECKED OnFocus="SetStatus(5)">DNA<BR>
+<INPUT NAME="dr" TYPE="radio" VALUE="RNA" OnFocus="SetStatus(5)">RNA<P>
+<!--INPUT NAME="ph" TYPE="radio" VALUE="PP" CHECKED">phosphate<BR>
+<INPUT NAME="ph" TYPE="radio" VALUE="PS">thioate<P-->
+<INPUT TYPE="checkbox" NAME="uncutbt" OnFocus="SetStatus(18)">allow undercut<BR>
+<!--INPUT TYPE="checkbox" NAME="synth" OnFocus="SetStatus(19)">synthetic residues -->
+</TD>
+<TD VALIGN=top>
+<B>Terminals</B></BR>
+<INPUT NAME="p5" TYPE="radio" VALUE="OH" CHECKED OnFocus="SetStatus(6)">5'-OH<BR>
+<INPUT NAME="p5" TYPE="radio" VALUE="p" OnFocus="SetStatus(6)">5' phosphate<P>
+<INPUT NAME="p3" TYPE="radio" VALUE="OH" CHECKED OnFocus="SetStatus(7)">3'-OH<BR>
+<INPUT NAME="p3" TYPE="radio" VALUE="p" OnFocus="SetStatus(7)">3' phosphate<BR>
+<INPUT NAME="p3" TYPE="radio" VALUE=">p" OnFocus="SetStatus(7)">3' cyclic phosphate<P>
+</TD>
+<TD VALIGN="top" ROWSPAN=2>
+<B>User residue 'N'</B><BR>
+<INPUT TYPE="text" SIZE=7 NAME="bam" OnFocus="SetStatus(16)"> base anion mass<BR>
+<INPUT TYPE="text" SIZE=7 NAME="sam" OnFocus="SetStatus(17)"> sugar add mass<P>
+
+<B>Output</B><BR>
+<INPUT TYPE="checkbox" name="closebt" CHECKED OnFocus="SetStatus(8)">close button<BR>
+<INPUT TYPE="checkbox" name="statsbt" CHECKED OnFocus="SetStatus(9)">output summary<BR>
+
+sequence by <INPUT TYPE="radio" VALUE=3 NAME="seqby" CHECKED OnFocus="SetStatus(15)">3 
+<INPUT TYPE="radio" VALUE=10 NAME="seqby" OnFocus="SetStatus(15)">10
+<INPUT TYPE="radio" VALUE=50 NAME="seqby" OnFocus="SetStatus(15)">50<BR>
+
+<INPUT TYPE="checkbox" NAME="extedbt" CHECKED OnFocus="SetStatus(10)">extended output<BR>
+<INPUT TYPE="checkbox" NAME="alertbt" CHECKED OnFocus="SetStatus(11)">show messages<BR>
+<INPUT TYPE="checkbox" NAME="sortdbt" OnFocus="SetStatus(12)">sorted output<BR>
+</TR>
+<TR>
+<TD ALIGN=CENTER WIDTH=150><INPUT TYPE="button" VALUE=" Calculate " onClick="DoCalc()">
+<TD ALIGN=CENTER WIDTH=150><INPUT TYPE="reset" VALUE=" Clear Form "'>
+<TD ALIGN=CENTER WIDTH=150><INPUT TYPE="button" VALUE=" Help " onClick="HelpMe()">
+</TR></TABLE>
+</FORM>
+<I><FONT SIZE=2>written by Jef Rozenski (1999)<BR>
+<A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></FONT></I>
+</BODY>
+</HTML>
