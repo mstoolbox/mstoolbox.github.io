@@ -1,8 +1,6 @@
-
 //
-// JavaScript routines for elcomp.htm
+// JavaScript routines for ELCOMP
 // by Jef Rozenski (1999)
-// jef.rozenski@rna.pharm.utah.edu
 // last modification : 11/03/2014
 //
 window.defaultStatus = '';
