@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>quickON - Quick Oligo Calculator v0.10</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="quickon.js"></SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#C0D0E0" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#FFFFFF">
+<NOSCRIPT>
+<CENTER>(You need to enable JavaScript in order to use this utility)</CENTER>
+</NOSCRIPT>
+<H1>quickON - Quick Oligo Calculator v0.10</H1>
+<NOSCRIPT>
+<B>Note :</B> JavaScript has to be enabled in your browser.<P>
+</NOSCRIPT>
+<FORM NAME="inp">
+<TABLE CELLPADDING=5 CELLSPACING=1 WIDTH=550 STYLE="background-color:#D0E0F0;border-style:solid;border-color:#B0C0D0;border-width:2px;">
+<TR>
+<TD COLSPAN=2>
+<TT>Oligo composition: <INPUT TYPE="text" NAME="formon" SIZE=20> (e.g. A3C12T4G5)<P>
+<INPUT TYPE="button" VALUE=" calculate " OnClick="DoCalc()">
+<INPUT TYPE="reset" VALUE=" clear form ">
+</TD>
+</TR><TR>
+<TD WIDTH=50%><TT>
+<B>oligo type</B><BR>
+<INPUT TYPE='radio' NAME='B' CHECKED> DNA<BR>
+<INPUT TYPE='radio' NAME='B'> RNA
+</TT></TD>
+<TD><TT>
+<B>backbone:</B><BR>
+<INPUT TYPE='radio' NAME='S' CHECKED> phosphate<BR>
+<INPUT TYPE='radio' NAME='S'> thioate
+</TT></TD>
+</TR><TR VALIGN='top'>
+<TD><TT>
+<B>5' end:</B><BR>
+<INPUT TYPE='radio' NAME='C' CHECKED> OH<BR>
+<INPUT TYPE='radio' NAME='C'> p<BR>
+</TT></TD>
+<TD><TT>
+<B>3' end:</B><BR>
+<INPUT TYPE='radio' NAME='D' CHECKED> OH<BR>
+<INPUT TYPE='radio' NAME='D'> p<BR>
+<INPUT TYPE='radio' NAME='D'> &gt;p
+</TT></TD>
+</TR><TR>
+<TD COLSPAN=2>
+<TT>Add elemental composition: <INPUT TYPE="text" NAME="forel" SIZE=20> (e.g. C2H5)
+</TT></TD>
+</TR>
+</TABLE>
+</FORM>
+<I><FONT SIZE=2>written by Jef Rozenski (2011)<BR>
+<A HREF='https://mstoolbox.github.io'>Masspec Toobox</A></FONT></I>
+</BODY>
+</HTML>
