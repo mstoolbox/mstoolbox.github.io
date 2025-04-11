@@ -1,0 +1,92 @@
+<HTML>
+<HEAD><TITLE>Elemental Composition Calculator v1.1</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="elcomp.js"></SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFCCFF" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#FFFFFF"
+onLoad="window.status='Welcome to Elemental Composition Calculator';SetDefault();">
+<H1>Elemental Composition Calculator v1.0</H1>
+<NOSCRIPT><B>Note :</B> JavaScript has to be enabled in your browser.<P></NOSCRIPT>
+<FORM NAME='inp'>
+<TABLE BORDER=0 BGCOLOR="#DD99DD" CELLPADDING="2">
+<TR VALIGN="center"> 
+  <TD COLSPAN=5 HEIGHT=50><B>target mass: </B>
+  <INPUT NAME="mw" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(1)">
+  <B>&nbsp;+/-&nbsp;</B>
+  <INPUT NAME="toler" TYPE="text" SIZE=5 VALUE=0.5 OnFocus="SetStatus(2)">&nbsp;
+  <SELECT NAME="ppm">
+  <OPTION SELECTED>amu</OPTION>
+  <OPTION>ppm</OPTION>
+  </SELECT>
+</TR><TR>
+  <TH WIDTH=50>element</TH><TH WIDTH=100>mass</TH><TH WIDTH=75>min</TH><TH WIDTH=75>max</TH><TH WIDTH=200>options</TH>
+</TR><TR>
+  <TD ALIGN=right><B>C: </B>
+  <TD><INPUT NAME="C" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)">
+  <TD><INPUT NAME="minC" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxC" TYPE="text" SIZE=5 VALUE=10 OnFocus="SetStatus(6,this.name)">
+<TD ROWSPAN=9 VALIGN="bottom">
+calculate:<BR>
+<INPUT NAME="ma" TYPE="radio" VALUE="M" CHECKED OnClick='SetElem()'>monoisotopic mass<BR>
+<INPUT NAME="ma" TYPE="radio" VALUE="A" OnClick='SetElem()'>average mass<P>
+<P>
+nitrogen rule:<BR>
+<INPUT NAME="ni" TYPE="radio" VALUE="0" CHECKED>do not apply / show all<BR>
+<INPUT NAME="ni" TYPE="radio" VALUE="1">even mass = even #nitrogens<BR>
+<INPUT NAME="ni" TYPE="radio" VALUE="2">even mass = odd #nitrogens<P>
+<P>
+charge:<BR>
+<INPUT NAME="ch" TYPE="radio" VALUE="-1">-1<BR>
+<INPUT NAME="ch" TYPE="radio" VALUE="0" CHECKED>0<BR>
+<INPUT NAME="ch" TYPE="radio" VALUE="1">+1<P>
+<P>
+offset mass: <INPUT NAME="offs" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(3)">
+<P>
+  <INPUT VALUE="  GO  " TYPE="button" OnClick='DoCalc()'>&nbsp;
+  <INPUT VALUE=" CLEAR " TYPE="button" OnClick="SetDefault()">
+</TD>
+</TR><TR>
+  <TD ALIGN=right><B>H: </B></TD>
+  <TD><INPUT NAME="H" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)"></TD>
+  <TD><INPUT NAME="minH" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)"></TD>
+  <TD><INPUT NAME="maxH" TYPE="text" SIZE=5 VALUE=10 OnFocus="SetStatus(6,this.name)"></TD>
+</TR><TR>
+  <TD ALIGN=right><B>N: </B></TD>
+  <TD><INPUT NAME="N" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)"></TD>
+  <TD><INPUT NAME="minN" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)"></TD>
+  <TD><INPUT NAME="maxN" TYPE="text" SIZE=5 VALUE=10 OnFocus="SetStatus(6,this.name)"></TD>
+</TR><TR>
+  <TD ALIGN=right><B>O: </B>
+  <TD><INPUT NAME="O" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)">
+  <TD><INPUT NAME="minO" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxO" TYPE="text" SIZE=5 VALUE=10 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>S: </B>
+  <TD><INPUT NAME="S" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(7,this.name)">
+  <TD><INPUT NAME="minS" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxS" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>P: </B>
+  <TD><INPUT NAME="P" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(4)">
+  <TD><INPUT NAME="minP" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxP" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>user X: </B>
+  <TD><INPUT NAME="X" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(4)">
+  <TD><INPUT NAME="minX" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxX" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>user Y: </B>
+  <TD><INPUT NAME="Y" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(4)">
+  <TD><INPUT NAME="minY" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxY" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR><TR>
+  <TD ALIGN=right><B>user Z: </B>
+  <TD><INPUT NAME="Z" TYPE="text" SIZE=10 VALUE=0 OnFocus="SetStatus(4)">
+  <TD><INPUT NAME="minZ" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(5,this.name)">
+  <TD><INPUT NAME="maxZ" TYPE="text" SIZE=5 VALUE=0 OnFocus="SetStatus(6,this.name)">
+</TR></TABLE>
+</FORM>
+<I><FONT SIZE=2>written by Jef Rozenski (1999)<BR>
+<A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></FONT></I>
+<BODY>
+</HTML>
