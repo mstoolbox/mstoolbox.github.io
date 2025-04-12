@@ -6,8 +6,8 @@
 function sstr(istr,strlen,dec)  // format value for output
 {
 var mystr = ""+istr;
-mystr = (Math.round(istr * 100) / 100).toFixed(dec); 
-mystr = "               " + mystr;
+mystr = istr.toFixed(dec); 
+mystr = " ".repeat(strlen) + mystr;
 return mystr.substr(mystr.length - strlen);
 }
 
