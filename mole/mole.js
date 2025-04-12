@@ -159,9 +159,9 @@ thetable += "</TR></TABLE>";
 for (i=0;i<10;++i)
   {
 //  thetable += "\n" + (i>0)?("M+"+str(i))):"M  " + ": " + str(isoto[i]*100,4,2) + "%";
-  if (isoto[i] == 0) { break; }
+  if (isoto[i] == 0.00) { break; }
   thetable += "\n";
-  thetable += (i>0)?("M+"+str(i)+": "):"M  : ";
+  thetable += (i>0)?("M+"+str(i,1,0)+": "):"M  : ";
   thetable += str(isoto[i]*100,4,2) + "%";
   }
 return thetable;
