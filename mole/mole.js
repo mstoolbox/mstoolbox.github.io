@@ -126,7 +126,7 @@ for (i=0;i<10;++i)
   {
   isoto[i] = isoto[i]/maxiso;
   thetable += "<TD WIDTH=25>";
-  thetable += (Math.round(isoto[i]*150)>0)?("<IMG SRC='red.gif' WIDTH=10 HEIGHT="+Math.round(isoto[i]*150)+" ALT=\"\" TITLE=\""+sstr(isoto[i]*100,4,2)+"%\">"):"&nbsp;";
+  thetable += (Math.round(isoto[i]*150)>0)?("<IMG SRC='red.gif' WIDTH=10 HEIGHT="+Math.round(isoto[i]*150)+">"):"&nbsp;";
   thetable += "</TD>";
   }
 thetable += "</TR>\n<TR ALIGN='center'><TH><TT>M</TT></TH>";
@@ -140,7 +140,7 @@ for (i=0;i<10;++i)
   if (Math.round(isoto[i]*10000) === 0) { break; }
   thetable += "\n";
   thetable += (i>0)?("M+"+sstr(i,1,0)+": "):"M  : ";
-  thetable += sstr(isoto[i]*100,6,2) + " % " + Math.round(isoto[i]*10000);
+  thetable += sstr(isoto[i]*100,6,2) + " % ";
   }
 return thetable;
 }
