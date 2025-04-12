@@ -137,10 +137,10 @@ for (i=1;i<10;++i)
 thetable += "</TR></TABLE>";
 for (i=0;i<10;++i)
   {
-  if (isoto[i].toFixed(4) === 0.0000) { break; }
+  if (Math.round(isoto[i]*10000) === 0) { break; }
   thetable += "\n";
   thetable += (i>0)?("M+"+sstr(i,1,0)+": "):"M  : ";
-  thetable += sstr(isoto[i]*100,6,2) + " %";
+  thetable += sstr(isoto[i]*100,6,2) + " % " + Math.round(isoto[i]*10000);
   }
 return thetable;
 }
