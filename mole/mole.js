@@ -158,7 +158,8 @@ for (i=1;i<10;++i)
 thetable += "</TR></TABLE>";
 for (i=0;i<10;++i)
   {
-  thetable += "\n" + (i>0)?("M+"+str(i))):"M  " + ": " + str(isoto[i]*100,4,2) + "%";
+    thetable += str(i);
+//  thetable += "\n" + (i>0)?("M+"+str(i))):"M  " + ": " + str(isoto[i]*100,4,2) + "%";
   }
 return thetable;
 }
