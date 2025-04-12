@@ -1,5 +1,5 @@
 //
-// JavaScript 1.1 routines for mole.htm
+// JavaScript 1.1 routines for MOLE
 // by Jef Rozenski (1998)
 // last modification : 2021-05-27
 //
@@ -156,6 +156,10 @@ for (i=1;i<10;++i)
   thetable += "<TH><TT>M+"+i+"</TT></TH>";
   }
 thetable += "</TR></TABLE>";
+for (i=0;i<10;++i)
+  {
+  thetable += "\n" + (i>0)?("M+"+str(i))):"M  " + ": " + str(isoto[i]*100,4,2) + "%";
+  }
 return thetable;
 }
 
