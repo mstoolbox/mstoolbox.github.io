@@ -160,8 +160,8 @@ for (i=0;i<10;++i)
   {
 //  thetable += "\n" + (i>0)?("M+"+str(i))):"M  " + ": " + str(isoto[i]*100,4,2) + "%";
   if (isoto[i] == 0) { break; }
-  thetable += "\n"
-  thetable += (i>0)?("M+"+str(i)+": "):"M  : "
+  thetable += "\n";
+  thetable += (i>0)?("M+"+str(i)+": "):"M  : ";
   thetable += str(isoto[i]*100,4,2) + "%";
   }
 return thetable;
