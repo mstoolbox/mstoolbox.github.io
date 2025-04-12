@@ -140,7 +140,7 @@ for (i=0;i<10;++i)
   if (isoto[i] === 0) { break; }
   thetable += "\n";
   thetable += (i>0)?("M+"+sstr(i,1,0)+": "):"M  : ";
-  thetable += sstr(isoto[i]*100,4,2) + "%";
+  thetable += sstr(isoto[i]*100,6,2) + " %" + isoto[i] + (isoto[i]===0);
   }
 return thetable;
 }
