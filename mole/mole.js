@@ -3,38 +3,14 @@
 // by Jef Rozenski (1998)
 // last modification : 2021-05-27
 //
-function sstr(istr,strlen,dec)  // format a string or value for output
+function sstr(istr,strlen,dec)  // format value for output
 {
 var mystr = ""+istr;
 mystr = (Math.round(istr * 100) / 100).toFixed(dec); 
 mystr = "               " + mystr;
 return mystr.substr(mystr.length - strlen);
-if (str.arguments.length > 2)
-  {
-  var i;
-  var decpt = mystr.indexOf(".");
-  if ((decpt < 0) && (dec>0))
-    {
-    mystr += ".";
-    decpt = mystr.indexOf(".");
-    }
-  if (dec>0)
-    {
-    for (i=decpt;i<(strlen-dec-1);++i){mystr = " "+mystr;}
-    for (i=mystr.length;i<strlen;++i){mystr += "0";}
-    mystr = mystr.substring(0,strlen);
-    }
-  else
-    {
-    for (i=mystr.length;i<strlen;++i){mystr = " "+mystr;}
-    }
-  }
-else
-  {
-  mystr = (mystr+"                    ").substring(0,strlen);
-  }
-return mystr;
 }
+
 // element name : monoisotopic mass : average mass : intensity M+1 : intensity M+2
 // if intensity = -1: isotope abundance not defined
 // elements should be in following order: C, H, all other alphabetically
@@ -161,8 +137,7 @@ for (i=1;i<10;++i)
 thetable += "</TR></TABLE>";
 for (i=0;i<10;++i)
   {
-//  thetable += "\n" + (i>0)?("M+"+sstr(i))):"M  " + ": " + sstr(isoto[i]*100,4,2) + "%";
-  if (isoto[i] == 0.00) { break; }
+  if (i == 3) { break; }
   thetable += "\n";
   thetable += (i>0)?("M+"+sstr(i,1,0)+": "):"M  : ";
   thetable += sstr(isoto[i]*100,4,2) + "%";
