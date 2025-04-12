@@ -179,14 +179,14 @@ if (itel[j]>0)
 
 outstr += "\n\n";
 outstr += (document.inp.X[0].checked)?"Monoisotopic":"Average";
-outstr += " mass : "+str(totmass,12,5)+"\n\n";
+outstr += " mass : "+sstr(totmass,12,5)+"\n\n";
 outstr += (document.inp.X[0].checked)?"      [M+H]+     [M+Na]+      [M-H]-\n":"";
-outstr += (document.inp.X[0].checked)?str(totmass+m[2]-elec,12,5)+str(totmass+m[14]-elec,12,5)+str(totmass-m[2]+elec,12,5)+"\n\n":"";
+outstr += (document.inp.X[0].checked)?sstr(totmass+m[2]-elec,12,5)+sstr(totmass+m[14]-elec,12,5)+sstr(totmass-m[2]+elec,12,5)+"\n\n":"";
 for (j=0;j<=elem.length;++j)
   {
   if (itel[j]>0)
     {
-    outstr += (elem[j]+"  ").substr(0,2)+"("+str(mass[j],7,3)+") : "+str(100*itel[j]*mass[j]/totmass,10,3)+" %\n";
+    outstr += (elem[j]+"  ").substr(0,2)+"("+sstr(mass[j],7,3)+") : "+sstr(100*itel[j]*mass[j]/totmass,10,3)+" %\n";
     } 
   }
 outstr += drawiso();
