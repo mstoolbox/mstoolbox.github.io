@@ -3,9 +3,12 @@
 // by Jef Rozenski (1998)
 // last modification : 2021-05-27
 //
-function str(istr,strlen,dec)  // format a string or value for output
+function sstr(istr,strlen,dec)  // format a string or value for output
 {
 var mystr = ""+istr;
+mystr = (Math.round(istr * 100) / 100).toFixed(dec); 
+mystr = "               " + mystr;
+return mystr.substr(mystr.length - strlen);
 if (str.arguments.length > 2)
   {
   var i;
@@ -147,7 +150,7 @@ for (i=0;i<10;++i)
   {
   isoto[i] = isoto[i]/maxiso;
   thetable += "<TD WIDTH=25>";
-  thetable += (Math.round(isoto[i]*150)>0)?("<IMG SRC='red.gif' WIDTH=10 HEIGHT="+Math.round(isoto[i]*150)+" ALT=\"\" TITLE=\""+str(isoto[i]*100,4,2)+"%\">"):"&nbsp;";
+  thetable += (Math.round(isoto[i]*150)>0)?("<IMG SRC='red.gif' WIDTH=10 HEIGHT="+Math.round(isoto[i]*150)+" ALT=\"\" TITLE=\""+sstr(isoto[i]*100,4,2)+"%\">"):"&nbsp;";
   thetable += "</TD>";
   }
 thetable += "</TR>\n<TR ALIGN='center'><TH><TT>M</TT></TH>";
@@ -158,11 +161,11 @@ for (i=1;i<10;++i)
 thetable += "</TR></TABLE>";
 for (i=0;i<10;++i)
   {
-//  thetable += "\n" + (i>0)?("M+"+str(i))):"M  " + ": " + str(isoto[i]*100,4,2) + "%";
+//  thetable += "\n" + (i>0)?("M+"+sstr(i))):"M  " + ": " + sstr(isoto[i]*100,4,2) + "%";
   if (isoto[i] == 0.00) { break; }
   thetable += "\n";
-  thetable += (i>0)?("M+"+str(i,1,0)+": "):"M  : ";
-  thetable += str(isoto[i]*100,4,2) + "%";
+  thetable += (i>0)?("M+"+sstr(i,1,0)+": "):"M  : ";
+  thetable += sstr(isoto[i]*100,4,2) + "%";
   }
 return thetable;
 }
