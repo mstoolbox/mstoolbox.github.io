@@ -137,7 +137,7 @@ for (i=1;i<10;++i)
 thetable += "</TR></TABLE>";
 for (i=0;i<10;++i)
   {
-  if (i == 3) { break; }
+  if (isoto[i] === 0) { break; }
   thetable += "\n";
   thetable += (i>0)?("M+"+sstr(i,1,0)+": "):"M  : ";
   thetable += sstr(isoto[i]*100,4,2) + "%";
