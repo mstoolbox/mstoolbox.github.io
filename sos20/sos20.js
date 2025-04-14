@@ -188,6 +188,7 @@ function initData() {
       allData[tempData[0]] = Number(tempData[1]);
       }
     if (allTextLines[i].match(/^\:/)) {
+      console.log(allTextLines[i]);
       specInfo.textContent = specInfo.textContent + allTextLines[i] + "\n";
       }
     }
