@@ -410,9 +410,9 @@ fetch(url)
        document.getElementById('confFileContent').textContent = response
    })
    .catch(err => console.log(err));
+document.getElementById('noconf').textContent = "";
 initConf();
 document.getElementById('confRec').textContent = "";
-document.getElementById('noconf').textContent = "";
 }
 
 function loadSpec(url){
@@ -423,9 +423,9 @@ fetch(url)
        document.getElementById('dataFileContent').textContent = response
    })
    .catch(err => console.log(err));
+document.getElementById('nodata').textContent = "";
 initData();
 document.getElementById('dataRec').textContent = "";
-document.getElementById('nodata').textContent = "";
 }
 
 window.onload = function() {
