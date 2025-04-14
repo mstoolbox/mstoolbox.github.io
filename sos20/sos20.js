@@ -402,20 +402,13 @@ function calcSeq(ctx,seq,iontype) {
   return themass;
 }
 
-function getConfDNA(){
-fetch("https://mstoolbox.github.io/sos20/confDNA.txt")
+function loadConf(url){
+fetch(url)
   .then(response => response.text())
   .then((response) => {
        document.getElementById('confFileContent').textContent = response
    })
    .catch(err => console.log(err));
-
-
-  
-//fetchPromise.then(response => { return response.text(); })
-//.then((reponse) => {return reponse.text()});
-//.then((response) => response.text())
-//.then((text) => var value = ));
 }
 
 window.onload = function() {
