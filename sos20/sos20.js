@@ -187,8 +187,8 @@ function initData() {
     if (tempData[0].match(/\d+[\\.\d]/)) {
       allData[tempData[0]] = Number(tempData[1]);
       }
+    console.log(allTextLines[i]);
     if (allTextLines[i].match(/^\:/)) {
-      console.log(allTextLines[i]);
       specInfo.textContent = specInfo.textContent + allTextLines[i] + "\n";
       }
     }
@@ -376,7 +376,6 @@ function calcSeq(ctx,seq,iontype) {
     mass += end3mass;
     }
   else if (iontype == "a-B") {
-//    mass += end5mass + sugarmass[seq[seq.length-1]] - calcMass("H3");
     mass += end5mass + sugarmass[symbols[1]] - calcMass("H3"); // furan mass is calculated from first nucleotide
     }
   else if (iontype == "y") {
