@@ -181,6 +181,7 @@ function initData() {
   var specInfo = document.getElementById('specInfo'); 
   var allTextLines = dataContent.split(/\r\n|\n/);
   var tempData = [];
+  console.log(allTextLines.length);
   for (var i=0; i<allTextLines.length; i++) {
     tempData = allTextLines[i].split(/ |\t/);
     if (tempData[0].match(/\d+[\\.\d]/)) {
