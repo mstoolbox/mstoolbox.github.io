@@ -179,7 +179,7 @@ function initData() {
   allInt = [];
   var dataContent = document.getElementById('dataFileContent').textContent; 
   var specInfo =  document.getElementById('dataFileContent'); 
-  specInfo.textContent = "";
+  specInfo.textContent = "123\n";
   var allTextLines = dataContent.split(/\r\n|\n/);
   var tempData = [];
   for (var i=0; i<allTextLines.length; i++) {
@@ -187,8 +187,8 @@ function initData() {
     if (tempData[0].match(/\d+[\\.\d]/)) {
       allData[tempData[0]] = Number(tempData[1]);
       }
-    console.log(allTextLines[i].charAt(0));
     if (allTextLines[i].charAt(0) === ":") {
+      console.log(allTextLines[i]);
       specInfo.textContent = specInfo.textContent + allTextLines[i] + "\n";
       }
     }
