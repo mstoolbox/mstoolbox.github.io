@@ -1,3 +1,7 @@
+:
+: example spectrum for DNA 5'-ACATTGCACAATCT-3'
+: MS/MS  m/z ??? 17.5 eV
+:
 100.8017	1.714e1
 100.9844	4.571e1
 105.2762	1.410e1
