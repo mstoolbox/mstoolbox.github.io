@@ -178,7 +178,7 @@ function initData() {
   allKeys = [];
   allInt = [];
   var dataContent = document.getElementById('dataFileContent').textContent; 
-  var specInfo = document.getElementById('specInfo'); 
+  var specInfo = ""; 
   var allTextLines = dataContent.split(/\r\n|\n/);
   var tempData = [];
   console.log(allTextLines.length);
@@ -408,11 +408,11 @@ document.getElementById('confFileContent').textContent = "";
 fetch(url)
   .then(response => response.text())
   .then((response) => {
-       document.getElementById('confFileContent').textContent = response
+    document.getElementById('confFileContent').textContent = response;
+    document.getElementById('noconf').textContent = "";
+    initConf();
    })
    .catch(err => console.log(err));
-document.getElementById('noconf').textContent = "";
-initConf();
 document.getElementById('confRec').textContent = "";
 }
 
@@ -423,7 +423,6 @@ fetch(url)
   .then((response) => {
     document.getElementById('dataFileContent').textContent = response;
     document.getElementById('nodata').textContent = "";
-    console.log('data');
     initData();
    })
    .catch(err => console.log(err));
