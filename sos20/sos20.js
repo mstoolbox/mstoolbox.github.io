@@ -403,6 +403,7 @@ function calcSeq(ctx,seq,iontype) {
 }
 
 function loadConf(url){
+document.getElementById('confFileContent').textContent = "";
 fetch(url)
   .then(response => response.text())
   .then((response) => {
@@ -411,9 +412,11 @@ fetch(url)
    .catch(err => console.log(err));
 initConf();
 document.getElementById('confRec').textContent = "";
+document.getElementById('noconf').textContent = "";
 }
 
 function loadSpec(url){
+document.getElementById('dataFileContent').textContent = "";
 fetch(url)
   .then(response => response.text())
   .then((response) => {
@@ -422,6 +425,7 @@ fetch(url)
    .catch(err => console.log(err));
 initData();
 document.getElementById('dataRec').textContent = "";
+document.getElementById('nodata').textContent = "";
 }
 
 window.onload = function() {
