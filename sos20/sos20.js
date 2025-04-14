@@ -406,7 +406,7 @@ function getConfDNA(){
 fetch("https://mstoolbox.github.io/sos20/confDNA.txt")
   .then(response => response.text())
   .then((response) => {
-       document.getElementById('confFileContent') = response
+       document.getElementById('confFileContent').textContent = response
    })
    .catch(err => console.log(err));
 
