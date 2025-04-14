@@ -178,7 +178,7 @@ function initData() {
   allKeys = [];
   allInt = [];
   var dataContent = document.getElementById('dataFileContent').textContent; 
-  var specInfo =  document.getElementById('dataFileContent'); 
+  var specInfo =  document.getElementById('specInfo'); 
   specInfo.textContent = "123\n";
   var allTextLines = dataContent.split(/\r\n|\n/);
   var tempData = [];
