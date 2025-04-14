@@ -409,6 +409,7 @@ fetch(url)
        document.getElementById('confFileContent').textContent = response
    })
    .catch(err => console.log(err));
+initConf();
 }
 
 window.onload = function() {
