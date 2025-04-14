@@ -409,7 +409,19 @@ fetch(url)
        document.getElementById('confFileContent').textContent = response
    })
    .catch(err => console.log(err));
+document.getElementById('confRec').textContent = "";
 initConf();
+}
+
+function loadSpec(url){
+fetch(url)
+  .then(response => response.text())
+  .then((response) => {
+       document.getElementById('dataFileContent').textContent = response
+   })
+   .catch(err => console.log(err));
+document.getElementById('dataRec').textContent = "";
+initData();
 }
 
 window.onload = function() {
