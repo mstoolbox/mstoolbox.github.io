@@ -409,8 +409,8 @@ fetch(url)
        document.getElementById('confFileContent').textContent = response
    })
    .catch(err => console.log(err));
-document.getElementById('confRec').textContent = "";
 initConf();
+document.getElementById('confRec').textContent = "";
 }
 
 function loadSpec(url){
@@ -420,8 +420,8 @@ fetch(url)
        document.getElementById('dataFileContent').textContent = response
    })
    .catch(err => console.log(err));
-document.getElementById('dataRec').textContent = "";
 initData();
+document.getElementById('dataRec').textContent = "";
 }
 
 window.onload = function() {
