@@ -423,6 +423,7 @@ fetch(url)
   .then((response) => {
     document.getElementById('dataFileContent').textContent = response;
     document.getElementById('nodata').textContent = "";
+    console.log('data');
     initData();
    })
    .catch(err => console.log(err));
