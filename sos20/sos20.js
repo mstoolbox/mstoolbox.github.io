@@ -403,10 +403,8 @@ function calcSeq(ctx,seq,iontype) {
 }
 
 function getConfDNA(){
-var filecontents = "123";
-fetch("https://mstoolbox.github.io/sos20/confDNA.txt")
-.then((reponse) => {filecontents = reponse.text()});
-return filecontents;
+return fetch("https://mstoolbox.github.io/sos20/confDNA.txt")
+.then((reponse) => {return reponse.text()});
 //.then((response) => response.text())
 //.then((text) => var value = ));
 }
