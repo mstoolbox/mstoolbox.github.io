@@ -421,11 +421,11 @@ document.getElementById('dataFileContent').textContent = "";
 fetch(url)
   .then(response => response.text())
   .then((response) => {
-       document.getElementById('dataFileContent').textContent = response
+    document.getElementById('dataFileContent').textContent = response;
+    document.getElementById('nodata').textContent = "";
+    initData();
    })
    .catch(err => console.log(err));
-document.getElementById('nodata').textContent = "";
-initData();
 document.getElementById('dataRec').textContent = "";
 }
 
