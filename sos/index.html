@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="sos20.css">
+<script src="sos20.js"></script>
+</head>
+<body>
+SOS v2.0
+<DIV id="myMenu">
+<UL>
+<LI><A HREF="" id="item1" onclick="changeMenu(this.id);return false;">input</A></LI>
+<LI><A HREF="" id="item2" onclick="changeMenu(this.id);return false;">sequence</A></LI>
+<LI><A HREF="" id="item3" onclick="changeMenu(this.id);return false;">spectrum</A></LI>
+<LI><A HREF="" id="item4" onclick="changeMenu(this.id);return false;">help</A></LI>
+</UL>
+</DIV><BR>
+
+<DIV id="myInput" style="display:none;">
+<DIV><SPAN class="fixedF">dataFile: </SPAN>[<A HREF='' onclick="loadSpec('https://mstoolbox.github.io/sos20/spectrum.txt');return false;">load example</A>] or <input type="file" id="dataFile" accept="text/txt"><SPAN id="dataRec"></SPAN></DIV>
+<DIV><SPAN class="fixedF">configurationFile:  </SPAN>[<A HREF='' onclick="loadConf('https://mstoolbox.github.io/sos20/confDNA.txt');return false;">load DNA</A>] [<A HREF='' onclick="loadConf('https://mstoolbox.github.io/sos20/confRNA.txt');return false;">load RNA</A>] or <input type="file" id="confFile" accept="text/txt"><SPAN id="confRec"></SPAN></DIV>
+<DIV id="mySetup" class="pre"><DIV id="confFileContent"></DIV></DIV>
+<DIV id="dataFileContent" style="display:none;"></DIV>
+</DIV>
+
+<DIV id="mySpectrum" style="display:none;">
+<P><SPAN id="nodata">[no datafile opened]</SPAN></P>
+<canvas id="specCanvas" class="specCanvas" width="750px" height="400px" style="visibility:hidden"></canvas>
+<DIV id="specInfo" class="pre"></DIV>
+</DIV>
+
+<DIV id="mySequence" style="display:none;">
+<INPUT id='seq' type='text' size="50" oninput="myFunction()">
+<INPUT TYPE="button" class="btn" id="iontype" value="w" onclick="changeIontype()">
+<INPUT TYPE="button" class="btn btnl" id="charge1" value="<"  onclick="changeCharge(-1)"><INPUT TYPE="button" class="btn btnm" id="charge" value="-1" onclick="changeCharge(0)"><INPUT TYPE="button" class="btn btnr" value=">" id="charge2" onclick="changeCharge(+1)">
+<INPUT TYPE="button" class="btn" id="clearseq" value="clear" onclick="clearSeq()">
+<P><SPAN id="noconf"">[no configuration file opened]</SPAN></P>
+<DIV id="myCanvas">
+<canvas id="myCanvas0" onclick="addRec('myCanvas0')" class="myCanvas" width="150px" height="300px"></canvas>
+<canvas id="myCanvas1" onclick="addRec('myCanvas1')" class="myCanvas" width="150px" height="300px"></canvas>
+<canvas id="myCanvas2" onclick="addRec('myCanvas2')" class="myCanvas" width="150px" height="300px"></canvas>
+<canvas id="myCanvas3" onclick="addRec('myCanvas3')" class="myCanvas" width="150px" height="300px"></canvas>
+<canvas id="myCanvas4" onclick="addRec('myCanvas4')" class="myCanvas" width="150px" height="300px"></canvas>
+<canvas id="myCanvas5" onclick="addRec('myCanvas5')" class="myCanvas" width="150px" height="300px"></canvas>
+<canvas id="myCanvas6" onclick="addRec('myCanvas6')" class="myCanvas" width="150px" height="300px"></canvas>
+<canvas id="myCanvas7" onclick="addRec('myCanvas7')" class="myCanvas" width="150px" height="300px"></canvas>
+</DIV>
+<SPAN></SPAN>
+</DIV>
+
+<DIV id="myAbout" style="display:none;">
+<H3>SOS 2.0</H3>
+Written by Jef Rozenski (2019)<BR>
+This is a web version based on the original paper:<BR>
+<DIV style="background-color:#EEEEEE;">SOS: a simple interactive program for ab initio oligonucleotide sequencing by mass spectrometry
+Rozenski, Jef ; McCloskey, James A. Journal of the American Society for Mass Spectrometry; 2002; Vol. 13; iss. 3; pp. 200-3</DIV> DOI:<A HREF='https://doi.org/10.1016/s1044-0305(01)00354-3'>10.1016/s1044-0305(01)00354-3</A>
+
+<H3>Disclaimer</H3>
+
+The software and related documentation are provided "as is" without warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement.<BR>
+The authors and distributors of this software shall not be held liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) arising in any way out of the use, inability to use, or misuse of this software, even if advised of the possibility of such damage.<BR>
+This software is intended for use at your own risk. By using this software, you agree that you are solely responsible for any outcomes resulting from its use. It is recommended that you test the software in a controlled environment before relying on it for critical tasks.<BR>
+No guarantee is given regarding the accuracy, reliability, or suitability of this software for any particular purpose. Users are encouraged to review the software's functionality and security before deployment.<BR>
+  
+<H3>Usage</H3>
+
+<UL>
+<LI><B>input</B><BR>
+Load datafile (mass - intensities from centroid spectra) and configuration file (text file). The configuration file will be displayed.
+Example spectrum is available, standard DNA and RNA configurations can be loaded or custom files can be uploaded.
+Note that the imput data is uploaded in your browser's memory only. No data is tranferred to any kind of cloud or server.
+<LI><B>sequence</B><BR>
+panels will show up when a configuration file is loaded<BR>
+The number of panels (maximum 8) depend on the number of residues defined in the configuration file.<BR>
+Select the ion type and charge<BR>
+Type the sequence in the input field or click on the panels<BR>
+The m/z axis displays the calculated value for the next residue<BR>
+The tick mark spacing on the m/z axis is 1u<BR>
+Number at the top right corner of the panels indicate the intensity of the highest peak displayed in all the panels
+<LI><B>spectrum</B><BR>
+A spectrum is shown after reading input data and initializing the sequence window
+<LI><B>help</B><BR>
+It's what you are reading now.
+</UL>
+
+<H3>Data files</H3>
+
+<UL>
+<LI>must contain m/z intentity records delimited by tabs (centroid data)
+<LI>lines starting with a colon are considered to be remarks and are ignored
+</UL>
+download: [<A HREF='example.dat' download>example datafile</A>] for DNA sequence 5'-ACATTGCACAATCT-3'
+
+<H3>Configuration files</H3>
+
+<UL>
+<LI>element masses should come first
+<LI>number of masses should correspond to number of elements
+<LI>use one-character codes for elements (e.g., replace Cl by L) and for residues
+<LI>the order of the panels corresponds to the order in the configuration file
+<LI>the a-B ion furan is calculated from the fist nucleotide in the 'symbols=' sentence
+<LI>lines starting with a colon are considered to be remarks and are ignored
+<LI>see figure below for composition of nucleotide moieties and for an example configuration file
+</UL>
+<P><img src="data:image/png;base64,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" alt="" /></P>
+<P>download: [<A HREF='confDNA.txt' download>DNA configuration file</A>] [<A HREF='confRNA.txt'download>RNA configuration file</A>]</P>
+
+<PRE>
+:
+:example configuration file for DNA
+:
+:element masses
+:
+elements=C|H|N|O|P
+elmass=12.0000|1.00782|14.00307|15.99491|30.97376
+:
+:end groups
+:
+end3=OH
+end5=HO
+:
+:residues
+:
+symbols=A|C|G|T
+bases=C5H4N5|C4H4N3O|C5H4N5O|C5H5N2O2
+sugars=C5H7O|C5H7O|C5H7O|C5H7O
+link1=O|O|O|O
+link2=PO2H|PO2H|PO2H|PO2H
+link3=O|O|O|O
+</PRE>
+</DIV>
+
+</body>
+</html>
