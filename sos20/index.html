@@ -55,23 +55,32 @@ This is a web version based on the original paper:<BR>
 <DIV style="background-color:#EEEEEE;">SOS: a simple interactive program for ab initio oligonucleotide sequencing by mass spectrometry
 Rozenski, Jef ; McCloskey, James A. Journal of the American Society for Mass Spectrometry; 2002; Vol. 13; iss. 3; pp. 200-3</DIV> DOI:<A HREF='https://doi.org/10.1016/s1044-0305(01)00354-3'>10.1016/s1044-0305(01)00354-3</A>
 
+<H3>Disclaimer</H3>
+
+The software and related documentation are provided "as is" without warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement.<BR>
+The authors and distributors of this software shall not be held liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) arising in any way out of the use, inability to use, or misuse of this software, even if advised of the possibility of such damage.<BR>
+This software is intended for use at your own risk. By using this software, you agree that you are solely responsible for any outcomes resulting from its use. It is recommended that you test the software in a controlled environment before relying on it for critical tasks.<BR>
+No guarantee is given regarding the accuracy, reliability, or suitability of this software for any particular purpose. Users are encouraged to review the software's functionality and security before deployment.<BR>
+  
 <H3>Usage</H3>
 
 <UL>
 <LI><B>input</B><BR>
-load datafile (mass - intensities from centroid spectra) and configuration file (text file). The configuration file will be displayed.
+Load datafile (mass - intensities from centroid spectra) and configuration file (text file). The configuration file will be displayed.
+Example spectrum is available, standard DNA and RNA configurations can be loaded or custom files can be uploaded.
+Note that the imput data is uploaded in your browser's memory only. No data is tranferred to any kind of cloud or server.
 <LI><B>sequence</B><BR>
 panels will show up when a configuration file is loaded<BR>
-the number of panels (maximum 8) depend on the number of residues defined in the configuration file<BR>
-select the ion type and charge<BR>
-type the sequence in the input field or click on the panels<BR>
-the m/z axis displays the calculated value for the next residue<BR>
-the tick mark spacing on the m/z axis is 1u<BR>
-number at the top right corner of the panels indicate the intensity of the highest peak displayed in all the panels
+The number of panels (maximum 8) depend on the number of residues defined in the configuration file.<BR>
+Select the ion type and charge<BR>
+Type the sequence in the input field or click on the panels<BR>
+The m/z axis displays the calculated value for the next residue<BR>
+The tick mark spacing on the m/z axis is 1u<BR>
+Number at the top right corner of the panels indicate the intensity of the highest peak displayed in all the panels
 <LI><B>spectrum</B><BR>
-a spectrum is shown after reading input data and initializing the sequence window
-<LI><B>about</B><BR>
-it's what you are reading now
+A spectrum is shown after reading input data and initializing the sequence window
+<LI><B>help</B><BR>
+It's what you are reading now.
 </UL>
 
 <H3>Data files</H3>
