@@ -41,10 +41,11 @@ H2 {
   margin-left: 4pt;
 }
 
-div.foot{
+div.foot, A {
   font-size: 10pt;
   font-style: italic; 
-  border-top: solid 2pt;  
+  border-top: solid 2pt;
+  color: dimgray;
 }
 
 body {
