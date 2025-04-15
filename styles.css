@@ -49,7 +49,9 @@ div.foot {
 }
 
 div.foot.A {
-border: 0;
+  border: 0;
+  color: dimgray;
+}
 
 body {
   font-family: "Arial", Times, sans-serif;
