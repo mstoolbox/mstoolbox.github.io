@@ -1,7 +1,7 @@
 :
 : SOS sample data
-: DNA8MER.TXT
-: sequence = CGAGCTCG
+: EXAMPLE.TXT
+: sequence = 5'-CGAGCTCG-3'
 : q-TOF2 CID spectrum 80eV
 : precursor = 601.3 (-4)
 : monoisotopic mass = 2409.441
