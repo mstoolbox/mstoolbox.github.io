@@ -1,6 +1,7 @@
 .small {
   font-family: "Times New Roman", Times, serif;
   font-size:9pt;
+  font-style: italic;
 }
 BODY, TD {
   font-family:verdana,tahoma,arial,helvetica;
