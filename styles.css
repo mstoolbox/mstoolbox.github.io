@@ -54,11 +54,11 @@ div.foot {
   color: dimgray;
 }
 
-div.foot.A {
+div.foot A {
   border: 0;
   color: dimgray;
 }
 
-div.foot.A:hover {
+div.foot A:hover {
   color: red;
 }
