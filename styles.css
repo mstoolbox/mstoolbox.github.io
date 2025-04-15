@@ -1,3 +1,9 @@
+body {
+  font-family: "Arial", Times, sans-serif;
+  background-color: beige;
+  color: dimgray;
+}
+
 .item {
   text-decoration: none;
   font-weight: normal;
@@ -53,8 +59,6 @@ div.foot.A {
   color: dimgray;
 }
 
-body {
-  font-family: "Arial", Times, sans-serif;
-  background-color: beige;
-  color: dimgray;
+div.foot.A:hover {
+  color: red;
 }
