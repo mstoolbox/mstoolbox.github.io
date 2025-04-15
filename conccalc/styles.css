@@ -2,9 +2,12 @@
   font-family: "Times New Roman", Times, serif;
   font-size:9pt;
 }
-BODY, TD, A:link, A:visited {
+BODY, TD {
   font-family:verdana,tahoma,arial,helvetica;
   font-size:11pt;
+  color:#000080;
+}
+A:link, A:visited {
   color:#000080;
 }
 A:hover {
