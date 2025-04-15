@@ -41,12 +41,15 @@ H2 {
   margin-left: 4pt;
 }
 
-div.foot, A {
+div.foot {
   font-size: 10pt;
   font-style: italic; 
   border-top: solid 2pt;
   color: dimgray;
 }
+
+div.foot.A {
+border: 0;
 
 body {
   font-family: "Arial", Times, sans-serif;
