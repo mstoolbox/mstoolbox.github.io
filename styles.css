@@ -33,7 +33,13 @@ body {
 
 .line {
   border-bottom: solid 2pt;
-  border-color: dimgray;
+  border-color: red;
+}
+
+H1 {
+  font-size: 16pt;
+  font-weight: bold;
+  margin-bottom: 0pt;
 }
 
 H2 {
