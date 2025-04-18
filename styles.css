@@ -25,11 +25,6 @@ body {
   background-color: gold;
 }
 
-.group {
-  font-weight: bold;
-  color: red;
-}
-
 .main, .sub {
   list-style-type: none;
   padding: 3px;
@@ -43,6 +38,8 @@ body {
 
 H2 {
   font-size: 12pt;
+  font-weight: bold;
+  color: red;
   margin-top: 8pt;
   margin-bottom: 4pt;
   margin-left: 4pt;
