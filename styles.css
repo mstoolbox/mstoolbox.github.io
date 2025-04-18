@@ -3,6 +3,7 @@ body {
   font-size: 1em;
   background-color: beige;
   color: dimgray;
+  margin-left: 10px;
 }
 
 .item {
@@ -45,7 +46,7 @@ H1 {
 
 H2 {
   font-size: 1.25em;
-  font-weight: normal;
+  font-weight: bold;
   color: red;
   margin-top: 8pt;
   margin-bottom: 4pt;
