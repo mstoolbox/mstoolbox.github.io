@@ -35,7 +35,7 @@ body {
 
 .line {
   border-bottom: solid 2px;
-  border-color: dimgray;
+  border-color: red;
 }
 
 H1 {
