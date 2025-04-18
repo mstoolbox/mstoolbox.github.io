@@ -18,7 +18,7 @@ body {
   width: 120px;
   height: 16px;
   margin: 2px;
-  margin-left: 10pt;
+  margin-left: 10px;
   display: inline-block;
   text-align: center;
 }
@@ -27,34 +27,34 @@ body {
   background-color: gold;
 }
 
-.main, .sub {
+.sub {
   list-style-type: none;
   padding: 3px;
   margin: 5px;
 }
 
 .line {
-  border-bottom: solid 2pt;
+  border-bottom: solid 2px;
   border-color: dimgray;
 }
 
 H1 {
   font-size: 2.5em;
   font-weight: bold;
-  margin-bottom: 0pt;
+  margin-bottom: 0px;
 }
 
 H2 {
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: bold;
   color: red;
-  margin-top: 8pt;
-  margin-bottom: 4pt;
-  margin-left: 4pt;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  margin-left: 4px;
 }
 
 div.foot {
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-style: italic; 
   color: dimgray;
 }
