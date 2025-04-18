@@ -14,7 +14,7 @@ body {
   background-color: white;
   color: green;
   padding: 5px 7px;
-  font-size: 0.85em;
+  font-size: 0.95em;
   width: 120px;
   height: 16px;
   margin: 2px;
@@ -35,7 +35,7 @@ body {
 
 .line {
   border-bottom: solid 2px;
-  border-color: red;
+  border-color: dimgray;
 }
 
 H1 {
