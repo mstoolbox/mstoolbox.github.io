@@ -36,8 +36,9 @@ body {
   margin: 5px;
 }
 
-H1.line {
+.line {
   border-bottom: solid 2pt;
+  border-color: dimgray;
 }
 
 H2 {
@@ -50,7 +51,6 @@ H2 {
 div.foot {
   font-size: 10pt;
   font-style: italic; 
-  border-top: solid 2pt;
   color: dimgray;
 }
 
