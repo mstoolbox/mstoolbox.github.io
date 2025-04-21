@@ -1,6 +1,6 @@
 body {
   font-family: "Arial", "Helvetica", Sans-Serif;
-  font-size: 0.9em;
+  font-size: 0.95em;
   background-color: beige;
   color: dimgray;
   margin-left: 10px;
@@ -54,7 +54,7 @@ H2 {
 }
 
 div.foot {
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-style: italic; 
   color: dimgray;
 }
