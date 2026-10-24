@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<HTML TRANSLATE="no"><HEAD><TITLE>SudokuSolver</TITLE><LINK REL='stylesheet' HREF='styles.css'>
+<HEAD>
+<!--
+examples:
+https://github.com/dimitri/sudoku/blob/master/sudoku.txt
+https://github.com/attractivechaos/plb/blob/master/sudoku/sudoku.txt
+https://www.kaggle.com/datasets/radcliffe/3-million-sudoku-puzzles-with-ratings
+-->
+<script>
+var myboard = new Array(9);
+
+for (let i = 0; i < myboard.length; i++) {
+  myboard[i] = new Array(9);
+  }
+
+function find_empty(board) {
+  for (let r = 0; r < 9; r++) {
+    for (let c = 0; c < 9; c++) {
+      if (board[r][c] == ".") {
+        return [r,c];
+		}
+	  }
+	}
+  return [-1,-1];
+}
+
+function is_valid(board, row, col, num) {
+  for (let c = 0; c < 9; c++) {
+    if (board[row][c] == num) {
+      return false;
+	  }
+	}
+  for (let r = 0; r <9; r++) {
+    if (board[r][col] == num) {
+      return false;
+	  }
+	}
+  box_row_start = (Math.floor(row/3)) * 3;
+  box_col_start = (Math.floor(col/3)) * 3;
+  for (let r = box_row_start; r < box_row_start + 3; r++) {
+    for (let c = box_col_start; c < box_col_start + 3; c++) {
+      if (board[r][c] == num) {
+        return false;
+		}
+	  }
+	}           
+  return true;
+}
+
+function solve_sudoku(board) {
+  const [row,col] = find_empty(board);
+  if (row < 0) {
+    return true;
+	}
+  for (let num = 1; num < 10; num++) {
+    if (is_valid(board, row, col, num)) {
+      board[row][col] = num;
+      if (solve_sudoku(board)) {
+	    myboard = board;
+        return true;
+		}
+      board[row][col] = ".";
+      }
+    }      
+  return false;
+}
+
+function clearinp() {
+  document.getElementById("inp").value = "";
+  document.getElementById("outp").innerHTML = "";
+  document.getElementById("outp").style.visibility = "hidden";
+  document.getElementById("checkinp").innerHTML = "";
+  document.getElementById("checkinp").style.visibility = "hidden";
+  document.getElementById("error").innerHTML = "";
+}
+
+function printout(board) {
+  let outstr = "";
+  let tmpstr = "";
+  for (let r = 0; r < 9; r++) {
+    for (let c = 0; c < 9; c++) {
+	  let s = c == 8 ? "\n" : "";
+      tmpstr += board[r][c] + s;
+	  }
+    }
+  let ofs = 0;
+  for (let i = 0; i < 3; i++) {
+    outstr += "<span style='background-color:#ffffff;'>" + tmpstr.substr(i * 10 + ofs + 0, 3) + "</span>";
+	outstr += tmpstr.substr(i * 10 + ofs + 3, 3);
+    outstr += "<span style='background-color:#ffffff;'>" + tmpstr.substr(i * 10 + ofs + 6, 4) + "</span>";
+    }
+  ofs = 10 * 3;
+  for (let i = 0; i < 3; i++) {
+    outstr += tmpstr.substr(i * 10 + ofs + 0, 3);
+	outstr += "<span style='background-color:#ffffff;'>" + tmpstr.substr(i * 10 + ofs + 3, 3) + "</span>";
+    outstr += tmpstr.substr(i * 10 + ofs + 6, 4);
+    }
+  ofs = 10 * 6;
+  for (let i = 0; i < 3; i++) {
+    outstr += "<span style='background-color:#ffffff;'>" + tmpstr.substr(i * 10 + ofs + 0, 3) + "</span>";
+	outstr += tmpstr.substr(i * 10 + ofs + 3, 3);
+    outstr += "<span style='background-color:#ffffff;'>" + tmpstr.substr(i * 10 + ofs + 6, 4) + "</span>";
+    }
+  return outstr;
+}
+
+function solvit() {
+  var r = 0;
+  var c = 0;
+  var theinp = document.getElementById("inp").value;
+  var s = theinp.replace(/[0 ]/g,'.');
+  s = s.replace(/[^1-9\.]/g,'');
+  
+  document.getElementById("error").innerHTML = "";
+
+  if (s.length != 81) {
+    document.getElementById("error").innerHTML = "invalid input (should be 9x9)";
+    document.getElementById("outp").style.visibility = "hidden";
+	document.getElementById("checkinp").style.visibility = "hidden";
+    return
+	}
+
+  for (var i = 0; i < s.length; i++) {
+	r = Math.floor(i/9);
+    c = i % 9;
+    myboard[r][c] = s[i];
+    }
+	
+  document.getElementById("checkinp").innerHTML = printout(myboard);
+  document.getElementById("checkinp").style.visibility = "visible";
+  
+  if (solve_sudoku(myboard)) {
+    document.getElementById("outp").innerHTML = printout(myboard);
+	document.getElementById("outp").style.visibility = "visible";
+  }
+  else {
+    document.getElementById("error").innerHTML = "no solution found";
+	document.getElementById("outp").style.visibility = "hidden";
+  }
+}
+</script>
+</HEAD>
+<BODY>
+<DIV id="ttl">sudoku solver</DIV>
+<DIV id="container">
+<PRE><B>input:</B> (use dot, space or zero for empty fields)
+
+<textarea id="inp" rows="9" cols="16">
+820040060
+001600890
+009831507
+490157000
+000000000
+053004000
+960415008
+100763200
+300028051</textarea></PRE>
+
+<DIV style='width:100%;float:left'>
+<PRE><input type="button" value=" solve " onClick="solvit();"> <input type="button" value=" clear " onClick="clearinp();">  <SPAN id='error' style='color:red;'></SPAN></PRE>
+</DIV>
+
+<DIV style='width:100%;overflow:hidden;'>
+<DIV style='float:left;width:150px;'>
+<PRE><B>input check:</B>
+<DIV id='checkinp'></DIV></PRE>
+</DIV>
+<DIV style='margin-left:160px;'>
+<PRE><B>solution:</B>
+<DIV id='outp'></DIV></PRE>
+</DIV>
+</DIV>
+</DIV> <!-- container -->
+
+<DIV id="ftr">written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></DIV>
+</body>
+</html>
