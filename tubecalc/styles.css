@@ -19,6 +19,9 @@ TABLE {
 TH {
   font-family: monospace;
 }
+TD, TH {
+  padding: 5px;
+}
 #ttl {
   width: 100%;
   height: 25px;
