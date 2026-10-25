@@ -5,24 +5,22 @@ BODY {
   background-color: #cccccc;
 }
 A:link, A:visited {
-  color:#000080;
+  color: #000080;
 }
 A:hover {
-  color:#0000FF;
-}
-TR {
-  background-color: #eeeeee;
+  color: #0000ff;
 }
 TABLE {
-  border: none;
-  padding: 5px;
-  width: 420px;
   border-spacing: 0px;
   border-collapse: separate;
   margin: 0px auto;
+  background-color: #eeeeee;
 }
 TH {
   font-family: monospace;
+}
+TD, TH {
+  padding: 5px;
 }
 #ttl {
   width: 100%;
