@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <HTML TRANSLATE="no"><HEAD><TITLE>TubeCalc</TITLE><LINK REL="stylesheet" HREF="styles.css">
 
-<SCRIPT LANGUAGE="JavaScript">
-<!--
+<SCRIPT>
 var dd,ll,vv;
 
 function myformat(nr)
@@ -34,8 +33,6 @@ ll = document.myform.alength.value  * document.myform.units2[document.myform.uni
 vv = Math.PI * (dd/2) * (dd/2) * ll / document.myform.units3[document.myform.units3.selectedIndex].value;
 document.myform.avol.value = myformat(vv);
 }
-
-//-->
 </SCRIPT>
 </HEAD>
 
@@ -57,7 +54,6 @@ document.myform.avol.value = myformat(vv);
 </TD>
 <TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="alength">
 <SELECT NAME="units2" SIZE=1>
-
 <OPTION VALUE = 0.001>um</OPTION>
 <OPTION VALUE = 1 SELECTED>mm</OPTION>
 <OPTION VALUE = 10>cm</OPTION>
@@ -69,7 +65,6 @@ document.myform.avol.value = myformat(vv);
 <SELECT NAME="units3" SIZE=1>
 <OPTION VALUE = 0.001>nL</OPTION>
 <OPTION VALUE = 1 SELECTED>uL</OPTION>
-
 <OPTION VALUE = 1000>mL</OPTION>
 <OPTION VALUE = 1000000>L</OPTION>
 </SELECT>
@@ -81,7 +76,7 @@ document.myform.avol.value = myformat(vv);
 <TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc VOLUME " ONCLICK="calcvol()"></TD>
 </TR>
 <TR ID="ftr">
-<TD>written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></SPAN></TD>
+<TD>written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></TD>
 </TR>
 </TABLE>
 </FORM>
