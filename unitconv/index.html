@@ -22,7 +22,6 @@ function b2a(a,b,c,x)
 <BODY>
 <DIV id="ttl">unit conversion routines</DIV>
 
-<CENTER>
 <FORM NAME='myform'>
 <TABLE>
 <TR><TH><TT>Fahrenheit</TT></TH><TH WIDTH='120'>&nbsp;</TH><TH><TT>Celcius</TT></TH></TR>
@@ -34,8 +33,8 @@ function b2a(a,b,c,x)
   
 <P>
 <TABLE>
-<TR BGCOLOR="#EEEEEE"><TH><TT>mile</TT><TH WIDTH='120'>&nbsp;<TH><TT>kilometer</TT></TH></TR>
-<TR BGCOLOR="#EEEEEE">
+<TR><TH><TT>mile</TT><TH WIDTH='120'>&nbsp;<TH><TT>kilometer</TT></TH></TR>
+<TR>
 <TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="amil">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to km =>  " ONCLICK="akm.value=a2b(0,1.6093,100,amil.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to miles " ONCLICK="amil.value=a2b(0,1/1.6093,100,akm.value)">
@@ -44,8 +43,8 @@ function b2a(a,b,c,x)
 
 <P>
 <TABLE>
-<TR BGCOLOR="#EEEEEE"><TH><TT>inch</TT><TH WIDTH='120'>&nbsp;<TH><TT>centimeter</TT></TH></TR>
-<TR BGCOLOR="#EEEEEE">
+<TR><TH><TT>inch</TT><TH WIDTH='120'>&nbsp;<TH><TT>centimeter</TT></TH></TR>
+<TR>
 <TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="ain">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to cm =>  " ONCLICK="acm.value=a2b(0,2.54,1000,ain.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to in " ONCLICK="ain.value=a2b(0,1/2.54,1000,acm.value)">
@@ -54,8 +53,8 @@ function b2a(a,b,c,x)
   
 <P>
 <TABLE>
-<TR BGCOLOR="#EEEEEE"><TH><TT>ounce</TT><TH WIDTH='120'>&nbsp;<TH><TT>gram</TT></TH></TR>
-<TR BGCOLOR="#EEEEEE">
+<TR><TH><TT>ounce</TT><TH WIDTH='120'>&nbsp;<TH><TT>gram</TT></TH></TR>
+<TR>
 <TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="oz">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to gram =>  " ONCLICK="gr.value=a2b(0,28.35,100,oz.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to ounces " ONCLICK="oz.value=a2b(0,1/28.35,1000,gr.value)">
@@ -63,9 +62,9 @@ function b2a(a,b,c,x)
 </TR></TABLE>
   
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='420'>
-<TR BGCOLOR="#EEEEEE"><TH><TT>pound</TT><TH WIDTH='120'>&nbsp;<TH><TT>kilogram</TT></TH></TR>
-<TR BGCOLOR="#EEEEEE">
+<TABLE>
+<TR><TH><TT>pound</TT><TH WIDTH='120'>&nbsp;<TH><TT>kilogram</TT></TH></TR>
+<TR>
 <TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="lb">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to kilogram =>  " ONCLICK="kg.value=a2b(0,1/2.2046,100,lb.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to pounds " ONCLICK="lb.value=a2b(0,2.2046,100,kg.value)">
@@ -73,9 +72,9 @@ function b2a(a,b,c,x)
 </TR></TABLE>
   
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='420'>
-<TR BGCOLOR="#EEEEEE"><TH><TT>fl oz</TT><TH WIDTH='120'>&nbsp;<TH><TT>ml</TT></TH></TR>
-<TR BGCOLOR="#EEEEEE">
+<TABLE>
+<TR><TH><TT>fl oz</TT><TH WIDTH='120'>&nbsp;<TH><TT>ml</TT></TH></TR>
+<TR>
 <TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="floz">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to ml =>  " ONCLICK="ml.value=a2b(0,29.574,100,floz.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to fl oz " ONCLICK="floz.value=a2b(0,1/29.574,1000,ml.value)">
@@ -83,9 +82,9 @@ function b2a(a,b,c,x)
 </TR></TABLE>
   
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='420'>
-<TR BGCOLOR="#EEEEEE"><TH><TT>gallon</TT><TH WIDTH='120'>&nbsp;<TH><TT>liter</TT></TH></TR>
-<TR BGCOLOR="#EEEEEE">
+<TABLE>
+<TR><TH><TT>gallon</TT><TH WIDTH='120'>&nbsp;<TH><TT>liter</TT></TH></TR>
+<TR>
 <TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="gal">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to liter =>  " ONCLICK="lit.value=a2b(0,3.7854,100,gal.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to gallon " ONCLICK="gal.value=a2b(0,1/3.7854,100,lit.value)">
@@ -93,19 +92,19 @@ function b2a(a,b,c,x)
 </TR></TABLE>
   
 <P>
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5 WIDTH='420'>
-<TR BGCOLOR="#EEEEEE"><TH><TT>psi</TT><TH WIDTH='120'>&nbsp;<TH><TT>bar</TT></TH></TR>
-<TR BGCOLOR="#EEEEEE">
+<TABLE>
+<TR><TH><TT>psi</TT><TH WIDTH='120'>&nbsp;<TH><TT>bar</TT></TH></TR>
+<TR>
 <TD ALIGN="right"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="psi">
 <TD ALIGN="center"><INPUT TYPE="button" VALUE="  to bar =>  " ONCLICK="bar.value=a2b(0,1/14.223343,100,psi.value)">
 <BR><INPUT TYPE="button" VALUE=" <= to psi " ONCLICK="psi.value=a2b(0,14.223343,100,bar.value)">
 <TD ALIGN="left"><INPUT TYPE="text" SIZE=10 VALUE="" NAME="bar">
 </TR></TABLE>
 
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH='420'>
-<TR BGCOLOR="#CCCCCC">
+<TABLE>
+<TR ID="ftr">
 <TD CLASS="small">written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></TD>
 </TR></TABLE>
 </FORM>
-</CENTER>
+
 </BODY></HTML>
