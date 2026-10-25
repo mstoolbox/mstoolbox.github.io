@@ -13,6 +13,9 @@ A:hover {
 TR {
   background-color: #eeeeee;
 }
+TABLE {
+  margin: 0px auto;
+}
 #ttl {
   width: 100%;
   height: 25px;
@@ -29,12 +32,4 @@ TR {
   font-style: italic;
   margin-top: 5px;
   background-color: #cccccc;
-}
-#container {
-  display: inline-block;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0 auto;
-  padding: 5px;
 }
