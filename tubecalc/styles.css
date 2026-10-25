@@ -11,7 +11,7 @@ A:hover {
   color: #0000ff;
 }
 TABLE {
-  border-spacing: 5px;
+  border-spacing: 0px;
   border-collapse: separate;
   margin: 0px auto;
   background-color: #eeeeee;
