@@ -30,7 +30,7 @@ A:hover {
 #container {
   display: inline-block;
   margin: 0 auto;
-  background-color: #303030;
+  background-color: #eeeeee;
   padding: 5px;
   border: 1px solid blue;
 }
