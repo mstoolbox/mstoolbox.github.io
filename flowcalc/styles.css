@@ -21,7 +21,6 @@ A:hover {
   margin-bottom: 10px;
 }
 #ftr {
-  margin: 0 auto;
   font-family: "Times New Roman", Times, serif;
   font-size: 9pt;
   font-style: italic;
@@ -29,6 +28,9 @@ A:hover {
 }
 #container {
   display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 auto;
   background-color: #eeeeee;
   padding: 5px;
