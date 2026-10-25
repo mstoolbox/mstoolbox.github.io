@@ -12,6 +12,7 @@ A:hover {
 }
 TR {
   background-color: #eeeeee;
+  border: 1px solid red;
 }
 TABLE {
   padding: 5px;
