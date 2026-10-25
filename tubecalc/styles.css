@@ -10,14 +10,11 @@ A:link, A:visited {
 A:hover {
   color: #0000ff;
 }
-TR {
-  background-color: #eeeeee;
-  border: 1px solid red;
-}
 TABLE {
   border-spacing: 5px;
   border-collapse: separate;
   margin: 0px auto;
+  background-color: #cccccc;
 }
 TH {
   font-family: monospace;
