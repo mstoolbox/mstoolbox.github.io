@@ -10,13 +10,15 @@ A:link, A:visited {
 A:hover {
   color:#0000FF;
 }
+TR {
+  background-color: #eeeeee;
+}
 TABLE {
   border: none;
   padding: 5px;
   width: 420px;
   border-spacing: 0px;
   border-collapse: separate;
-  background-color: #eeeeee;
   margin: 0px auto;
 }
 TH {
