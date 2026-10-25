@@ -28,3 +28,9 @@ A:hover {
   font-style: italic;
   margin-top: 5px;
 }
+#container {
+  width: 420px;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  padding: 5px;
+}
