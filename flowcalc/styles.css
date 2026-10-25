@@ -25,6 +25,7 @@ A:hover {
   font-size: 9pt;
   font-style: italic;
   margin-top: 5px;
+  background-color: #cccccc;
 }
 #container {
   display: inline-block;
