@@ -28,7 +28,7 @@ A:hover {
   margin-top: 5px;
 }
 #container {
-  width: 600px;
+  display: inline-block;
   margin: 0 auto;
   background-color: #eeeeee;
   padding: 5px;
