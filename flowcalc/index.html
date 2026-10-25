@@ -2,7 +2,6 @@
 <HTML TRANSLATE="no"><HEAD><TITLE>FlowCalc</TITLE><LINK REL="stylesheet" HREF="styles.css">
 
 <SCRIPT LANGUAGE="JavaScript">
-<!--
 var ff;
 
 function myformat(nr)
@@ -48,8 +47,6 @@ ff = ff / (document.myform.olddiam.value * document.myform.olddiamu[document.myf
 ff = Math.pow(ff,2) * document.myform.oldflow.value * document.myform.oldflowu[document.myform.oldflowu.selectedIndex].value;
 document.myform.newflow.value = myformat(ff * document.myform.newflowu[document.myform.newflowu.selectedIndex].value);
 }
-
-//-->
 </SCRIPT>
 </HEAD>
 
@@ -59,7 +56,6 @@ document.myform.newflow.value = myformat(ff * document.myform.newflowu[document.
 <FORM NAME="myform">
 <TABLE>
 <TR><TH>old diameter</TH><TH>old flow</TH><TH>new diameter</TH><TH>new flow</TH></TR>
-
 <TR>
 <TD><INPUT TYPE="text" SIZE=10 VALUE="4.6" NAME="olddiam">
 <SELECT NAME="olddiamu" SIZE=1>
@@ -69,7 +65,6 @@ document.myform.newflow.value = myformat(ff * document.myform.newflowu[document.
 <OPTION VALUE = 0.001>um</OPTION>
 </SELECT>
 </TD>
-
 <TD><INPUT TYPE="text" SIZE=10 VALUE="1" NAME="oldflow">
 <SELECT NAME="oldflowu" SIZE=1>
 <OPTION VALUE = 1000>uL/min</OPTION>
@@ -79,7 +74,6 @@ document.myform.newflow.value = myformat(ff * document.myform.newflowu[document.
 <OPTION VALUE = 0.06>l/H</OPTION>
 </SELECT>
 </TD>
-
 <TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="newdiam">
 <SELECT NAME="newdiamu" SIZE=1>
 <OPTION VALUE = 1000>m</OPTION>
@@ -88,7 +82,6 @@ document.myform.newflow.value = myformat(ff * document.myform.newflowu[document.
 <OPTION VALUE = 0.001>um</OPTION>
 </SELECT>
 </TD>
-
 <TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="newflow">
 <SELECT NAME="newflowu" SIZE=1>
 <OPTION VALUE = 1000>uL/min</OPTION>
@@ -99,7 +92,6 @@ document.myform.newflow.value = myformat(ff * document.myform.newflowu[document.
 </SELECT>
 </TD>
 </TR>
-
 <TR>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
@@ -107,7 +99,7 @@ document.myform.newflow.value = myformat(ff * document.myform.newflowu[document.
 <TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc FLOW " ONCLICK="calcflow()"></TD>
 </TR>
 <TR id="ftr">
-<TD>written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></TD>
+<TD COLSPAN=4>written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></TD>
 </TR>
 </TABLE>
 </FORM>
