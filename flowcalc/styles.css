@@ -21,7 +21,6 @@ A:hover {
   margin-bottom: 10px;
 }
 #ftr {
-  width: 420px;
   margin: 0 auto;
   font-family: "Times New Roman", Times, serif;
   font-size: 9pt;
@@ -29,7 +28,6 @@ A:hover {
   margin-top: 5px;
 }
 #container {
-  width: 420px;
   margin: 0 auto;
   background-color: #eeeeee;
   padding: 5px;
