@@ -15,6 +15,7 @@ TABLE {
   border-collapse: separate;
   margin: 0px auto;
   background-color: #eeeeee;
+  width: 420px;
 }
 TH {
   font-family: monospace;
