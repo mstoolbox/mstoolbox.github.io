@@ -12,9 +12,11 @@ A:hover {
 }
 TR {
   background-color: #eeeeee;
-}
 TABLE {
   margin: 0px auto;
+}
+TH {
+  font-family: monospace;
 }
 #ttl {
   width: 100%;
@@ -30,6 +32,5 @@ TABLE {
   font-family: "Times New Roman", Times, serif;
   font-size: 9pt;
   font-style: italic;
-  margin-top: 5px;
   background-color: #cccccc;
 }
