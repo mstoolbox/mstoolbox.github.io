@@ -10,6 +10,9 @@ A:link, A:visited {
 A:hover {
   color: #0000ff;
 }
+TR {
+  background-color: #eeeeee;
+}
 #ttl {
   width: 100%;
   height: 25px;
@@ -33,6 +36,5 @@ A:hover {
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
-  background-color: #eeeeee;
   padding: 5px;
 }
