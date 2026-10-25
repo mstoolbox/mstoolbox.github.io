@@ -14,6 +14,14 @@ TR {
   background-color: #eeeeee;
 }
 TABLE {
+  TR {
+  background-color: #eeeeee;
+}
+TABLE {
+  padding: 5px;
+  width: 420px;
+  border-spacing: 0px;
+  border-collapse: separate;
   margin: 0px auto;
 }
 TH {
