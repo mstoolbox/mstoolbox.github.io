@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<HTML><HEAD><TITLE>TubeCalc</TITLE><LINK REL="stylesheet" HREF="styles.css">
+<HTML TRANSLATE="no"><HEAD><TITLE>FlowCalc</TITLE><LINK REL="stylesheet" HREF="styles.css">
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--
@@ -40,14 +40,13 @@ document.myform.avol.value = myformat(vv);
 </HEAD>
 
 <BODY BGCOLOR="#CCCCCC">
-<TABLE BORDER=0 WIDTH="100%"><TR BGCOLOR="#EEEEEE"><TD HEIGHT=25 ALIGN='center' CLASS='tit'>tube volume calculator</TD></TR></TABLE><P><TT>
+<DIV id="ttl">tube volume calculator</DIV>
 
-<CENTER>
 <FORM NAME="myform">
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
-<TR BGCOLOR="#EEEEEE"><TH><TT>diameter</TT></TH><TH><TT>length</TT></TH><TH><TT>volume</TT></TH></TR>
+<TABLE>
+<TR><TH><TT>diameter</TT></TH><TH><TT>length</TT></TH><TH><TT>volume</TT></TH></TR>
 
-<TR BGCOLOR="#EEEEEE">
+<TR>
 <TD><INPUT TYPE="text" SIZE=10 VALUE="" NAME="adiam">
 <SELECT NAME="units1" SIZE=1>
 <OPTION VALUE = 0.001>um</OPTION>
@@ -77,13 +76,13 @@ document.myform.avol.value = myformat(vv);
 </SELECT>
 </TD>
 </TR>
-<TR BGCOLOR="#EEEEEE">
+<TR>
 <TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc DIAM " ONCLICK="calcdiam()"></TD>
 <TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc LENGTH " ONCLICK="calclength()"></TD>
 <TD ALIGN="center"><INPUT TYPE="button" VALUE=" calc VOLUME " ONCLICK="calcvol()"></TD>
 </TR>
-<TR BGCOLOR="#CCCCCC">
-<TD CLASS="small">written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></TD>
+<TR id="ftr">
+<TD>written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></TD>
 </TR>
 </TABLE>
 </FORM>
