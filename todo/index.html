@@ -47,10 +47,12 @@ function isDone(what) {
   if (outstr.indexOf('\u0336') < 0) {
     outstr = strikeThrough(outstr);
     document.getElementById(what + "Z").style.opacity = "0.5";
+	document.getElementById(what).checked = true;
   }
   else {
     outstr = outstr.replaceAll("\u0336","");
     document.getElementById(what + "Z").style.opacity = "1.0";
+	document.getElementById(what).checked = false;
   }
   document.getElementById(what + "X").innerHTML = outstr;
 }
