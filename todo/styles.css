@@ -48,17 +48,20 @@ A:hover {
 .items {
   background-color: #e0e0e0;
 }
-
+.isdone {
+  text-decoration: line-through;
+}
+.notdone {
+  text-decoration: none;
+}
 dl {
   min-height: 20px;	
 }
-
 dt {
   float: left;
   clear: left;
   margin-right: 5px;
 }
-
 dd {
   margin-left: 0px;
 }
