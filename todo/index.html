@@ -11,12 +11,12 @@ function displayItems() {
   document.getElementById("tasks").innerHTML = outstr;
   for (let i = 0; i < keys.length; i++) {
     if (localStorage.getItem(keys[i]).indexOf('\u0336') < 0) {
-	  document.getElementById(what + "X").classname = 'notdone';
+	  document.getElementById(jeys[i] + "X").classname = 'notdone';
       document.getElementById(keys[i] + "Z").style.opacity = "1.0";
 	  document.getElementById(keys[i]).checked = false;
 	}
     else {
-      document.getElementById(what + "X").classname = 'isdone';
+      document.getElementById(keys[i] + "X").classname = 'isdone';
       document.getElementById(keys[i] + "Z").style.opacity = "0.5";
 	  document.getElementById(keys[i]).checked = true;;
     }
