@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<HTML TRANSLATE="no"><HEAD><TITLE>ToDoList</TITLE><LINK REL='stylesheet' HREF='styles.css'>
+<HEAD>
+<script>
+function getItems() {
+  let outstr = "";
+  let keys = sortKeys(localStorage);
+  for (let i = 0; i < keys.length; i++) {
+    outstr += makeItem(keys[i], localStorage.getItem(keys[i])  );
+  }
+  document.getElementById("tasks").innerHTML = outstr;
+}
+
+function makeItem(thekey, theval) {
+  let outstr = "";
+  outstr += "<PRE><DIV id='" + thekey + "Z' CLASS='items'>";
+  outstr += "<DL><DT><INPUT type='checkbox' id='" + thekey + "' onClick='isDone(this.id)'></DT>";
+  outstr += "<DD><SPAN id='" + thekey + "X'>" + theval + "</SPAN>";
+  outstr += "<A HREF='' id='" + thekey + "Y' style='float:right;' onClick='removeItem(this.id)'>[delete]</A></DD>";
+  outstr += "</DL></DIV></PRE>";
+  return outstr;
+}
+
+function clearAll() {
+  localStorage.clear();
+  getItems();
+}
+
+function addItem() {
+  let thetask = document.getElementById("inp").value;
+  if (thetask.length > 0) {
+    localStorage.setItem(Date.now(),document.getElementById("inp").value);
+	document.getElementById("inp").value = "";
+    getItems();
+  }
+}
+
+function removeItem(what) {
+  what = what.replace(/[^0-9]/g,"");
+  localStorage.removeItem(what);
+  getItems();
+}
+
+function isDone(what) {
+  let outstr = document.getElementById(what + "X").innerHTML;
+  if (outstr.indexOf('\u0336') < 0) {
+    outstr = strikeThrough(outstr);
+    document.getElementById(what + "Z").style.opacity = "0.5";
+  }
+  else {
+    outstr = outstr.replaceAll("\u0336","");
+    document.getElementById(what + "Z").style.opacity = "1.0";
+  }
+  document.getElementById(what + "X").innerHTML = outstr;
+}
+
+function strikeThrough(text) {
+
+  return text
+	.toString()
+    .split('')
+    .map(char => '\u0336' + char)
+    .join('')
+}
+
+function sortKeys(obj) {
+  let keys = Object.keys(obj).sort((a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+  });
+  return keys;
+}
+</script>
+</HEAD>
+<BODY>
+<DIV id="ttl">ToDo list</DIV>
+<DIV id="container">
+<textarea id="inp" rows="2" cols="25" placeholder="Enter task..."></textarea> <input type="button" value=" add task " onClick="addItem()">  <input type="button" value=" clear all " onClick="clearAll()"></PRE>
+
+<DIV id='tasks'></DIV>
+</DIV> <!-- container -->
+
+<DIV id="ftr">written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></DIV>
+<script>
+getItems();
+</script>
+</body>
+</html>
