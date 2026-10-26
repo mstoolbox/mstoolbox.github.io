@@ -55,6 +55,7 @@ function isDone(what) {
 	document.getElementById(what).checked = false;
   }
   document.getElementById(what + "X").innerHTML = outstr;
+  localStorage.setItem(what,outstr);
 }
 
 function strikeThrough(text) {
