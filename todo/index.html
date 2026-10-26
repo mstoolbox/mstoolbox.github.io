@@ -62,6 +62,7 @@ function isDone(what) {
   else {
     outstr = outstr.replaceAll("\u0336","");
   }
+ console.log(outstr.length() + " " + outstr);
   localStorage.setItem(what,outstr);
   displayItems();
 }
