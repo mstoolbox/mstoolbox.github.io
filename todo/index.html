@@ -11,11 +11,12 @@ function displayItems() {
   document.getElementById("tasks").innerHTML = outstr;
   for (let i = 0; i < keys.length; i++) {
     if (localStorage.getItem(keys[i]).indexOf('\u0336') < 0) {
+	  document.getElementById(what + "X").classname = 'notdone';
       document.getElementById(keys[i] + "Z").style.opacity = "1.0";
-	  document.getElementById(keys[i]).checked = false
+	  document.getElementById(keys[i]).checked = false;
 	}
     else {
-      outstr = strikeThrough(outstr);
+      document.getElementById(what + "X").classname = 'isdone';
       document.getElementById(keys[i] + "Z").style.opacity = "0.5";
 	  document.getElementById(keys[i]).checked = true;;
     }
@@ -26,7 +27,7 @@ function makeItem(thekey, theval) {
   let outstr = "";
   outstr += "<PRE><DIV id='" + thekey + "Z' CLASS='items'>";
   outstr += "<DL><DT><INPUT type='checkbox' id='" + thekey + "' onClick='isDone(this.id)'></DT>";
-  outstr += "<DD><SPAN id='" + thekey + "X' onClick='isDone(this.id)'>" + theval + "</SPAN>";
+  outstr += "<DD><SPAN id='" + thekey + "X' class='notdone' onClick='isDone(this.id)'>" + theval + "</SPAN>";
   outstr += "<A HREF='' id='" + thekey + "Y' style='float:right;' onClick='removeItem(this.id)'>[delete]</A></DD>";
   outstr += "</DL></DIV></PRE>";
   return outstr;
@@ -53,6 +54,19 @@ function removeItem(what) {
 }
 
 function isDone(what) {
+  what = what.replace(/[^0-9]/g,"");
+  let theclass = document.getElementById(what + "X").classname;
+  let theval = localStorage(what);
+  if (theval.indexOf('\u200D') < 0) {
+	document.getElementById(what + "X").innerHTML = theval + '\u200D';
+  }
+  else {
+	document.getElementById(what + "X").innerHTML = theval.replace("\u200D","");
+  }
+  displayItems();
+}
+
+Function tisDone(what) {
   what = what.replace(/[^0-9]/g,"");
   let outstr = document.getElementById(what + "X").innerHTML;
   if (outstr.indexOf('\u0336') < 0) {
