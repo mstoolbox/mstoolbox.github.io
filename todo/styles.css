@@ -49,10 +49,10 @@ A:hover {
   background-color: #e0e0e0;
 }
 .isdone {
-  text-decoration: line-through;
+  text-decoration-line: line-through;
 }
 .notdone {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 dl {
   min-height: 20px;	
