@@ -15,7 +15,7 @@ function makeItem(thekey, theval) {
   let outstr = "";
   outstr += "<PRE><DIV id='" + thekey + "Z' CLASS='items'>";
   outstr += "<DL><DT><INPUT type='checkbox' id='" + thekey + "' onClick='isDone(this.id)'></DT>";
-  outstr += "<DD><SPAN id='" + thekey + "X'>" + theval + "</SPAN>";
+  outstr += "<DD><SPAN id='" + thekey + "X' onClick='isDone(this.id)>" + theval + "</SPAN>";
   outstr += "<A HREF='' id='" + thekey + "Y' style='float:right;' onClick='removeItem(this.id)'>[delete]</A></DD>";
   outstr += "</DL></DIV></PRE>";
   return outstr;
@@ -42,6 +42,7 @@ function removeItem(what) {
 }
 
 function isDone(what) {
+  what = what.replace(/[^0-9]/g,"");
   let outstr = document.getElementById(what + "X").innerHTML;
   if (outstr.indexOf('\u0336') < 0) {
     outstr = strikeThrough(outstr);
