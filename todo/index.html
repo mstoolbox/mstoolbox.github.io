@@ -56,13 +56,14 @@ function removeItem(what) {
 function isDone(what) {
   what = what.replace(/[^0-9]/g,"");
   let theclass = document.getElementById(what + "X").classname;
-  let theval = localStorage(what);
+  let theval = localStorage.getItem(what);
   if (theval.indexOf('\u200D') < 0) {
-	document.getElementById(what + "X").innerHTML = theval + '\u200D';
+	theval += '\u200D';
   }
   else {
-	document.getElementById(what + "X").innerHTML = theval.replace("\u200D","");
+	theval = theval.replaceAll("\u200D","");
   }
+  localStorage.setItem(what,theval);
   displayItems();
 }
 
@@ -78,14 +79,6 @@ function tisDone(what) {
  console.log(outstr.length + " " + outstr);
   localStorage.setItem(what,outstr);
   displayItems();
-}
-
-function strikeThrough(text) {
-  return text
-	.toString()
-    .split('')
-    .map(char => '\u0336' + char)
-    .join('')
 }
 
 function sortKeys(obj) {
