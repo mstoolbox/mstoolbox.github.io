@@ -2,23 +2,23 @@
 <HTML TRANSLATE="no"><HEAD><TITLE>ToDoList</TITLE><LINK REL='stylesheet' HREF='styles.css'>
 <HEAD>
 <script>
-function getItems() {
+function displayItems() {
   let outstr = "";
   let keys = sortKeys(localStorage);
   for (let i = 0; i < keys.length; i++) {
-    outstr += makeItem(keys[i], localStorage.getItem(keys[i])  );
+    outstr += makeItem(keys[i], localStorage.getItem(keys[i]));
   }
   document.getElementById("tasks").innerHTML = outstr;
+  console.log(outstr);
   for (let i = 0; i < keys.length; i++) {
-    if (outstr.indexOf('\u0336') < 0) {
-      outstr = strikeThrough(outstr);
-      document.getElementById(what + "Z").style.opacity = "0.5";
-	  document.getElementById(what).checked = true;
+    if (localStorage.getItem(keys[i]).indexOf('\u0336') < 0) {
+      document.getElementById(keys[i] + "Z").style.opacity = "1.0";
+	  document.getElementById(keys[i]).checked = false
 	}
     else {
-      outstr = outstr.replaceAll("\u0336","");
-      document.getElementById(what + "Z").style.opacity = "1.0";
-	  document.getElementById(what).checked = false;
+      outstr = strikeThrough(outstr);
+      document.getElementById(keys[i] + "Z").style.opacity = "0.5";
+	  document.getElementById(keys[i]).checked = true;;
     }
   }
 }
@@ -35,7 +35,7 @@ function makeItem(thekey, theval) {
 
 function clearAll() {
   localStorage.clear();
-  getItems();
+  displayItems();
 }
 
 function addItem() {
@@ -43,14 +43,14 @@ function addItem() {
   if (thetask.length > 0) {
     localStorage.setItem(Date.now(),document.getElementById("inp").value);
 	document.getElementById("inp").value = "";
-    getItems();
+    displayItems();
   }
 }
 
 function removeItem(what) {
   what = what.replace(/[^0-9]/g,"");
   localStorage.removeItem(what);
-  getItems();
+  displayItems();
 }
 
 function isDone(what) {
@@ -63,11 +63,10 @@ function isDone(what) {
     outstr = outstr.replaceAll("\u0336","");
   }
   localStorage.setItem(what,outstr);
-  setItems();
+  displayItems();
 }
 
 function strikeThrough(text) {
-
   return text
 	.toString()
     .split('')
@@ -95,7 +94,7 @@ function sortKeys(obj) {
 
 <DIV id="ftr">written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></DIV>
 <script>
-getItems();
+displayItems();
 </script>
 </body>
 </html>
