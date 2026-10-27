@@ -66,7 +66,7 @@ dd {
   margin-left: 0px;
 }
 /* Responsive Overrides for Smartphones */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 480px) {
   body {
     font-size: 36px;
     font-weight: bold;
@@ -75,3 +75,4 @@ dd {
   #container {
     width: 100%;
   }
+}
