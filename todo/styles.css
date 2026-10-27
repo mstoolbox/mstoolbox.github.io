@@ -66,9 +66,9 @@ dd {
   margin-left: 0px;
 }
 /* Responsive Overrides for Smartphones */
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 800px) {
   body {
-    font-size: 36px;
+    font-size: 5vw;
     font-weight: bold;
     background-color: #accccc;
   }
