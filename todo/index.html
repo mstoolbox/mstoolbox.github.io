@@ -69,20 +69,6 @@ function isDone(what) {
   displayItems();
 }
 
-function tisDone(what) {
-  what = what.replace(/[^0-9]/g,"");
-  let outstr = document.getElementById(what + "X").innerHTML;
-  if (outstr.indexOf('\u0336') < 0) {
-    outstr = strikeThrough(outstr);
-  }
-  else {
-    outstr = outstr.replaceAll("\u0336","");
-  }
- console.log(outstr.length + " " + outstr);
-  localStorage.setItem(what,outstr);
-  displayItems();
-}
-
 function sortKeys(obj) {
   let keys = Object.keys(obj).sort((a, b) => {
     if (a < b) return -1;
