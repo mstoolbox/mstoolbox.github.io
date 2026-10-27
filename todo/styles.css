@@ -70,3 +70,6 @@ dd {
   body {
     font-size: 36px;     /* Minimum legible font size to prevent iOS auto-zoom */
   }
+  #container {
+  width: 100%;
+  }
