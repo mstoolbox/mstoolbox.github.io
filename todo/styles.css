@@ -65,3 +65,8 @@ dt {
 dd {
   margin-left: 0px;
 }
+/* Responsive Overrides for Smartphones */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;     /* Minimum legible font size to prevent iOS auto-zoom */
+  }
