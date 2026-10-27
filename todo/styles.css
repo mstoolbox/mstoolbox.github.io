@@ -68,5 +68,5 @@ dd {
 /* Responsive Overrides for Smartphones */
 @media screen and (max-width: 480px) {
   body {
-    font-size: 24px;     /* Minimum legible font size to prevent iOS auto-zoom */
+    font-size: 36px;     /* Minimum legible font size to prevent iOS auto-zoom */
   }
