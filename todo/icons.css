@@ -1,6 +1,6 @@
 /* Generated Icon Library */
 .icon {
-  --icon-size: 20px;
+  --icon-size: 2em;
   --icon-color: currentColor;
   display: inline-block;
   width: var(--icon-size);
