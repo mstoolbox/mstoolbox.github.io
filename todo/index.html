@@ -36,8 +36,17 @@ function makeItem(thekey, theval) {
   return outstr;
 }
 
-function clearAll() {
+function delAll() {
   localStorage.clear();
+  displayItems();
+}
+
+function delDone() {
+  for (var key in localStorage) {
+    if (theval.indexOf('\u200D') > 0) {
+      console.log(localstorage(key);
+    }
+  }
   displayItems();
 }
 
