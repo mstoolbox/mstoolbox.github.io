@@ -44,6 +44,7 @@ A:hover {
   margin: 5px;
   overflow: hidden;
   font-family: monospace;
+  max-length: 50;
 }
 #tasks {
   font-family: monospace;
@@ -75,6 +76,7 @@ dd {
   color: white;
   padding: 5px; /* Some padding */
   cursor: pointer; /* Mouse pointer on hover */
+  border-radius: 5px;
 }
 
 /* Darker background on mouse-over */
