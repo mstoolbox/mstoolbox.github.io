@@ -42,12 +42,13 @@ function delAll() {
 }
 
 function delDone() {
-  let keys = localStorage.keys;
-  let keyn = localStorage.length;
+  let tempStorage = localStorage;
+	console.log(localStorage);
+  let keyn = tempStorage.length;
+ console.log(keyn);
   for (var i = 0; i < keyn; i++) {
-	let theval = localStorage.getItem(keys[i]);
     if (theval.indexOf('\u200D') > 0) {
-      localStorage.removeItem(keys[i]);
+//      localStorage.removeItem(keys[i]);
     }
   }
   displayItems();
