@@ -42,12 +42,12 @@ function delAll() {
 }
 
 function delDone() {
-  let tempStorage = localStorage;
-  for (i = 0; i < tempStorage.length; i++) {
-	let value = localStorage.getItem(tempStorage.key(i));
-	console.log(i, tempStorage.key(i), value,tempStorage.length);
+  let keys = Object.keys(localStorage);
+  for (let i = 0; i < keys.length; i++) {
+    let value = localStorage.getItem(keys[i]);
+	console.log(i, keys[i], value);
     if (value.indexOf('\u200D') > 0) {
-      localStorage.removeItem(tempStorage.key(i));
+      localStorage.removeItem(keys[i]);
     }
   }
   displayItems();
