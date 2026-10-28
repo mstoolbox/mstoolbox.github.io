@@ -31,7 +31,7 @@ function makeItem(thekey, theval) {
   outstr += "<PRE><DIV id='" + thekey + "Z' CLASS='items'>";
   outstr += "<DL><DT><INPUT type='checkbox' id='" + thekey + "' onClick='isDone(this.id)'></DT>";
   outstr += "<DD><SPAN id='" + thekey + "X' class='notdone' onClick='isDone(this.id)'>" + theval + "</SPAN>";
-  outstr += "<A HREF='' id='" + thekey + "Y' style='float:right;' onClick='removeItem(this.id)'>[delete]</A></DD>";
+  outstr += "<A HREF='' id='" + thekey + "Y' style='float:right;' onClick='deleteItem(this.id)'>[delete]</A></DD>";
   outstr += "</DL></DIV></PRE>";
   return outstr;
 }
@@ -46,6 +46,7 @@ function delDone() {
   let keyn = tempStorage.length - 1;
   for (var i = 0; i < keyn; i++) {
 	let theval = localStorage.getItem(tempStorage.key(i));
+console.log(tempStorage.key(i), theval);
     if (theval.indexOf('\u200D') > 0) {
       localStorage.removeItem(tempStorage.key(i));
     }
@@ -62,7 +63,7 @@ function addItem() {
   }
 }
 
-function removeItem(what) {
+function deleteItem(what) {
   what = what.replace(/[^0-9]/g,"");
   localStorage.removeItem(what);
   displayItems();
