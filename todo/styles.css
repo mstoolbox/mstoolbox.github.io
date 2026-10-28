@@ -90,6 +90,6 @@ dd {
     width: 100%;
   }
   .icon {
-    --icon-size: calc(2.75em + 10px);
+    --icon-size: calc(4vw + 10px);
   }
 }
