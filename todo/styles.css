@@ -41,8 +41,6 @@ A:hover {
   width: 25em;
   height: 3em;
   resize: none;
-  rows: 2;
-  cols: 25;
   margin: 5px;
   overflow: hidden;
 }
