@@ -68,7 +68,7 @@ dd {
   background-color: DodgerBlue; /* Blue background */
   border: none; /* Remove borders */
   color: white; /* White text */
-  padding: 2px 2px; /* Some padding */
+  padding: 5px; /* Some padding */
   font-size: 16px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
 }
