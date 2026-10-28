@@ -1,6 +1,6 @@
 BODY {
   font-family: verdana,tahoma,arial,helvetica;
-  font-size: 3vw;
+  font-size: 11pt;
   color: #000080;
   background-color: #cccccc;
 }
@@ -83,7 +83,7 @@ dd {
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
   body, textarea {
-    font-size: 4vw;
+    font-size: 12pt;
   }
   #container, #ftr {
     width: 100%;
