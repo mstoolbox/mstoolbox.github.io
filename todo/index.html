@@ -83,7 +83,11 @@ function sortKeys(obj) {
 <BODY>
 <DIV id="ttl">ToDo list</DIV>
 <DIV id="container">
-<DIV style="display: flex; align-items: center;"><textarea id="inp" rows="2" cols="25" placeholder="Enter task..."></textarea> <!--input type="button" value=" add task " onClick="addItem()"> <button class="btn" onClick="addItem()" title="add new task"><i class="icon icon-jr-add"></i></button> <div style='position:relative;float:right;width:100%;'><button class="btn" onClick="delDone()" title="delete tasks done"><i class="icon icon-jr-clean"></i></button> <button class="btn" onClick="delAll()" title="delete all tasks"><i class="icon icon-jr-delete"></i></button></DIV></div>
+<DIV style="display: flex; align-items: center;">
+<textarea id="inp" placeholder="Enter task..."></textarea>
+<button class="btn" onClick="addItem()" title="add new task"><i class="icon icon-jr-add"></i></button> &nbsp;
+<button class="btn" onClick="delDone()" title="delete tasks done"><i class="icon icon-jr-clean"></i></button> &nbsp;
+<button class="btn" onClick="delAll()" title="delete all tasks"><i class="icon icon-jr-delete"></i></button></DIV>
 
 <DIV id='tasks'></DIV>
 </DIV> <!-- container -->
