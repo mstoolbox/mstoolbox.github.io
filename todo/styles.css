@@ -88,8 +88,8 @@ dd {
   #container, #ftr {
     width: 100%;
   }
-  .btn {
-    height: 2em;
-    width: 2em;
+  .icon {
+  --icon-size: 2em;
+  --icon-color: red;
   }
 }
