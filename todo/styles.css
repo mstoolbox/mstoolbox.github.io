@@ -68,7 +68,7 @@ dd {
   margin-left: 0px;
 }
 .btn {
-  background-color: #000080; /* Blue background */
+  background-color: DodgerBlue; /* Blue background */
   border: none; /* Remove borders */
   padding: 5px; /* Some padding */
   cursor: pointer; /* Mouse pointer on hover */
@@ -76,7 +76,7 @@ dd {
 
 /* Darker background on mouse-over */
 .btn:hover {
-  background-color: DodgerBlue;
+  background-color: RoyalBlue;
 }
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
