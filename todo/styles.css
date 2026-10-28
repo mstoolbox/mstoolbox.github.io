@@ -39,7 +39,7 @@ A:hover {
 #inp {
   font-family: monospace;
   width: 15em;
-  height: calc(2.5em + 10px);
+  height: 2.5em;
   resize: none;
   margin: 5px;
   overflow: hidden;
@@ -73,12 +73,12 @@ dd {
   background-color: DodgerBlue;
   border: none;
   color: white;
-  padding: 5px;
+  padding: 0px;
   cursor: pointer;
   border-radius: 5px;
   font-family: monospace;
-  height: 2.5em;
-  width: 2.5em;
+  height: calc(2.5em + 10px);
+  width: calc(2.5em + 10px);
 }
 .btn:hover {
   background-color: RoyalBlue;
