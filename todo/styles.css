@@ -70,6 +70,7 @@ dd {
 .btn {
   background-color: DodgerBlue; /* Blue background */
   border: none; /* Remove borders */
+  color: white;
   padding: 5px; /* Some padding */
   cursor: pointer; /* Mouse pointer on hover */
 }
