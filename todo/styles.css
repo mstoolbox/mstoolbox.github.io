@@ -70,12 +70,13 @@ dd {
   margin-left: 0px;
 }
 .btn {
-  background-color: DodgerBlue; /* Blue background */
-  border: none; /* Remove borders */
+  background-color: DodgerBlue;
+  border: none;
   color: white;
-  padding: 5px; /* Some padding */
-  cursor: pointer; /* Mouse pointer on hover */
+  padding: 5px;
+  cursor: pointer;
   border-radius: 5px;
+  font-family: monospace;
 }
 .btn:hover {
   background-color: RoyalBlue;
