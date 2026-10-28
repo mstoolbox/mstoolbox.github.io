@@ -45,7 +45,7 @@ function delDone() {
   for (var key in localStorage) {
 	let theval = localStorage.getItem(key);
     if (theval.indexOf('\u200D') > 0) {
-      console.log(localstorage(key));
+      console.log(theval);
     }
   }
   displayItems();
