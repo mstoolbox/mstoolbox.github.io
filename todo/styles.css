@@ -73,12 +73,12 @@ dd {
   background-color: DodgerBlue;
   border: none;
   color: white;
-  padding: 0px;
+  padding: 5px;
   cursor: pointer;
   border-radius: 5px;
   font-family: monospace;
-  height: calc(2em + 10px);
-  width: calc(2em + 10px);
+  height: 2em
+  width: 2em;
 }
 .btn:hover {
   background-color: RoyalBlue;
@@ -92,7 +92,7 @@ dd {
     width: 100%;
   }
   .btn {
-    height: caalc(3em + 10px);
-    width: caalc(3em + 10px);
+    height: 3em;
+    width: 3em;
   }
 }
