@@ -36,7 +36,7 @@ A:hover {
   padding: 5px;
 }
 #inp {
-  width: 30em;
+  width: auto;
   height: 3em;
   resize: none;
   rows: 2;
@@ -68,17 +68,15 @@ dd {
   margin-left: 0px;
 }
 .btn {
-  background-color: DodgerBlue; /* Blue background */
+  background-color: #000080; /* Blue background */
   border: none; /* Remove borders */
-  color: white; /* White text */
   padding: 5px; /* Some padding */
-  font-size: 16px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
 }
 
 /* Darker background on mouse-over */
 .btn:hover {
-  background-color: RoyalBlue;
+  background-color: DodgerBlue;
 }
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
