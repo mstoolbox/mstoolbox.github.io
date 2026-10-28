@@ -42,9 +42,9 @@ function delAll() {
 }
 
 function delDone() {
-  for (var key in localStorage) {
-	let theval = localStorage.getItem(key);
-	console.log(key + "*");
+  for (var i = 0; i < localStorage.length; i++) {
+	let theval = localStorage.getItem(localStorage.key(i));
+	console.log(localStorage.key(i) + "*");
     if (theval.indexOf('\u200D') > 0) {
       console.log(theval);
     }
