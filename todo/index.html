@@ -43,7 +43,8 @@ function delAll() {
 
 function delDone() {
   for (var key in localStorage) {
-    if (theval.indexOf('\u200D') > 0) {
+	let theval = localStorage(key);
+    if (localStorage(key).indexOf('\u200D') > 0) {
       console.log(localstorage(key));
     }
   }
