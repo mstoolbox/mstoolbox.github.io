@@ -43,10 +43,9 @@ function delAll() {
 
 function delDone() {
   let tempStorage = localStorage;
-  let keyn = tempStorage.length;
+  let keyn = tempStorage.length - 1;
   for (var i = 0; i < keyn; i++) {
 	let theval = localStorage.getItem(tempStorage.key(i));
-	console.log(theval);
     if (theval.indexOf('\u200D') > 0) {
       localStorage.removeItem(tempStorage.key(i));
     }
