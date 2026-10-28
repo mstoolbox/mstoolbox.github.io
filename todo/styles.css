@@ -37,15 +37,13 @@ A:hover {
   overflow: hidden;
 }
 #inp {
-  width: auto;
+  font-family: monospace;
+  width: 25em;
   height: 3em;
   resize: none;
   rows: 2;
-  cols: 25;
   margin: 5px;
   overflow: hidden;
-  font-family: monospace;
-  max-length: 50;
 }
 #tasks {
   font-family: monospace;
