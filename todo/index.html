@@ -43,12 +43,11 @@ function delAll() {
 
 function delDone() {
   let tempStorage = localStorage;
-	console.log(localStorage);
   let keyn = tempStorage.length;
- console.log(keyn);
   for (var i = 0; i < keyn; i++) {
+	let theval = localStorage(tempStorage.key(i));
     if (theval.indexOf('\u200D') > 0) {
-//      localStorage.removeItem(keys[i]);
+      localStorage.removeItem(tempStorage.key(i));
     }
   }
   displayItems();
