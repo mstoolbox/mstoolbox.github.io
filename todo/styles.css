@@ -36,9 +36,10 @@ A:hover {
   padding: 5px;
 }
 #inp {
-  width: auto;
+  width: 150px;
   height: 3em;
   resize: none;
+  rows: 2;
   margin: 5px;
 }
 #tasks {
