@@ -42,6 +42,8 @@ A:hover {
   rows: 2;
   cols: 25;
   margin: 5px;
+  overflow: hidden;
+  font-family: monospace;
 }
 #tasks {
   font-family: monospace;
