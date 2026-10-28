@@ -1,6 +1,6 @@
 BODY {
   font-family: verdana,tahoma,arial,helvetica;
-  font-size: 11pt;
+  font-size: 3vw;
   color: #000080;
   background-color: #cccccc;
 }
@@ -92,7 +92,7 @@ dd {
     width: 100%;
   }
   .btn {
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
   }
 }
