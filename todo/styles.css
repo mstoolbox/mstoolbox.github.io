@@ -62,6 +62,7 @@ A:hover {
 }
 dl {
   min-height: 20px;	
+  overflow: hidden;
 }
 dt {
   float: left;
@@ -70,6 +71,7 @@ dt {
 }
 dd {
   margin-left: 0px;
+  overflow: hidden;
 }
 .btn {
   background-color: DodgerBlue; /* Blue background */
