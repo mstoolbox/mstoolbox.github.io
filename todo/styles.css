@@ -40,6 +40,7 @@ A:hover {
   height: 3em;
   resize: none;
   rows: 2;
+  cols: 25;
   margin: 5px;
 }
 #tasks {
