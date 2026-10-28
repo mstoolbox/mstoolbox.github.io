@@ -39,7 +39,6 @@ A:hover {
   width: auto;
   resize: none;
   margin: 5px;
-  margin-bottom: -5px;
 }
 #tasks {
   font-family: monospace;
