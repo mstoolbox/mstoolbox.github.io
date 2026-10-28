@@ -78,6 +78,7 @@ dd {
   border-radius: 5px;
   font-family: monospace;
   height: 2.5em;
+  width: 2.5em;
 }
 .btn:hover {
   background-color: RoyalBlue;
