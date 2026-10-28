@@ -89,7 +89,6 @@ dd {
     width: 100%;
   }
   .icon {
-  --icon-size: 2em;
-  --icon-color: red;
+  --icon-size: 4em;
   }
 }
