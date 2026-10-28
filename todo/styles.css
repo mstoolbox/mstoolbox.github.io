@@ -37,8 +37,8 @@ A:hover {
 }
 #inp {
   width: auto;
+  height: 2em;
   resize: none;
-  margin: 5px;
 }
 #tasks {
   font-family: monospace;
