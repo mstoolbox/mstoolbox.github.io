@@ -38,8 +38,8 @@ A:hover {
 }
 #inp {
   font-family: monospace;
-  width: 18em;
-  height: 3em;
+  width: 15em;
+  height: calc(3em + 10px);
   resize: none;
   margin: 5px;
   overflow: hidden;
