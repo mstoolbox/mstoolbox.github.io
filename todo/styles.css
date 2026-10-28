@@ -39,7 +39,7 @@ A:hover {
 #inp {
   font-family: monospace;
   width: 15em;
-  height: calc(3em + 10px);
+  height: calc(2.5em + 10px);
   resize: none;
   margin: 5px;
   overflow: hidden;
