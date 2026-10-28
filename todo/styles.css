@@ -77,8 +77,8 @@ dd {
   cursor: pointer;
   border-radius: 5px;
   font-family: monospace;
-  height: calc(3em + 10px);
-  width: calc(3em + 10px);
+  height: calc(2.5em + 10px);
+  width: calc(2.5em + 10px);
 }
 .btn:hover {
   background-color: RoyalBlue;
@@ -92,6 +92,7 @@ dd {
     width: 100%;
   }
   .btn {
-    height: 2.5em;
+    height: caalc(2.5em + 10px);
+    width: caalc(2.5em + 10px);
   }
 }
