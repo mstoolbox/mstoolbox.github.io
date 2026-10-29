@@ -28,42 +28,14 @@ function displayItems() {
 }
 
 function makeItem(thekey, theval) {
-  let outstr1 = "";
-  outstr1 += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items' style='display: block; align-items: center; width:100%; border: 1px solid red;'>";
-  outstr1 += "<DL><DT><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></DT>";
-  outstr1 += "<DD><SPAN id='???X' onClick='isDone(this.id)'>" + theval + "</SPAN>";
-  outstr1 += "<button class='btn floatright' id='???Y' onClick='deleteItem(this.id)' title='add new task'><i class='icon icon-sm icon-jr-delthis'></i></button></DD>";
-  outstr1 += "</DL></DIV></PRE>";
-	
-  let outstr2 = "";
-  outstr2 += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items'>";
-  outstr2 += "<SPAN><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></SPAN>&nbsp;";
-  outstr2 += "<SPAN id='???X' onClick='isDone(this.id)'>" + theval + "</SPAN><SPAN WIDTH='100%'>&nbsp;</SPAN>";
-  outstr2 += "<SPAN class='floatright'><button class='btn' id='???Y' onClick='deleteItem(this.id)' title='add new task'><i class='icon icon-sm icon-jr-delthis'></i></button></SPAN>";
-  outstr2 += "</DIV></PRE>";
-
-  let outstr3 = "";
-  outstr3 += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items' style='display: block; align-items: center; width:100%; border: 1px solid red;'>";
-  outstr3 += "<DIV><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></DIV>";
-  outstr3 += "<DIV id='???X' onClick='isDone(this.id)'>" + theval + "</DIV>";
-  outstr3 += "<DIV class='floatright'><button class='btn' id='???Y' onClick='deleteItem(this.id)' title='add new task'><i class='icon icon-sm icon-jr-delthis'></i></button></DIV>";
-  outstr3 += "</DIV></PRE>";
-
   let outstr = "";
-
   outstr += "<PRE id='???O' class='notdone'><div id='???Z' CLASS='items'>";
   outstr += "<div class='thecheck'><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></div>";
-  outstr += "<div id='???X' onClick='isDone(this.id)' style='width:100%;display: table-cell;border: 2px solid red;'float: none; overflow:hidden;>" + theval + "</DIV>";
+  outstr += "<div id='???X' onClick='isDone(this.id)' class='thetext'>" + theval + "</DIV>";
   outstr += "<div style='display: table-cell;padding-right:0px;border: 2px solid black;text-align:right;margin-right:0px;width:2em;min-width:1em;'><button class='btn' id='???Y' onClick='deleteItem(this.id)' title='delete this item'><i class='icon icon-sm icon-jr-delthis'></i></button></div>";
   outstr += "</PRE>";
-
-	
   return outstr.replaceAll("???",thekey);
-
-
-
 }
-
 
 function delAll() {
   localStorage.clear();
