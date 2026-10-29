@@ -15,7 +15,7 @@
 }
 
 /* Modifiers */
-.icon.icon-sm { --icon-size: 1.25em; }
+.icon.icon-sm { --icon-size: 1em; }
 .icon.icon-md { --icon-size: 32px; }
 .icon.icon-lg { --icon-size: 48px; }
 
