@@ -51,7 +51,7 @@ A:hover {
 .items {
   display: table-row;
   background-color: #e0e0e0;
-  align-items: center;
+  vertical-align: middle;
   width: 100%;
 }
 .isdone {
