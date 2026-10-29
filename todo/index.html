@@ -51,9 +51,9 @@ function makeItem(thekey, theval) {
 
   let outstr = "";
 
-  outstr += "<PRE id='???O' class='notdone'><div style='display: table-row;width=100%' id='???Z' CLASS='items'>";
+  outstr += "<PRE id='???O' class='notdone'><div style='display: table-row;width=100%; border: 1px solid red;' id='???Z' CLASS='items'>";
   outstr += "<div style='width: 20px; display: table-cell;'><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></div>";
-  outstr += "<div id='???X' onClick='isDone(this.id)' style='width: 80%; display: table-cell;'>" + theval + "</DIV>";
+  outstr += "<div id='???X' onClick='isDone(this.id)' style='width: 90%; display: table-cell;'>" + theval + "</DIV>";
   outstr += "<div style='display: table-cell;'><button class='btn' id='???Y' onClick='deleteItem(this.id)' title='add new task'><i class='icon icon-sm icon-jr-delthis'></i></button></div>";
   outstr += "</PRE>";
 
