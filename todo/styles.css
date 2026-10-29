@@ -90,7 +90,7 @@ dd {
     width: 100%;
   }
   .icon {
-    width: 2em;
-    height: 2em;
+    width: calc(2em + 10px);
+    height: calc(2em + 10px);
   }
 }
