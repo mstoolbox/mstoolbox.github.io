@@ -49,9 +49,10 @@ A:hover {
   width: 100%;
 }
 .items {
+  display: table-row;
   background-color: #e0e0e0;
   align-items: center;
-  display: table-row;
+  width: 100%;
 }
 .isdone {
   text-decoration-line: line-through;
@@ -81,6 +82,7 @@ A:hover {
 }
 .thebutton {
   display: table-cell;
+  float: right;
 }
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
