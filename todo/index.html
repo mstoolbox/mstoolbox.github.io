@@ -29,9 +29,9 @@ function displayItems() {
 
 function makeItem(thekey, theval) {
   let outstr = "";
-  outstr += "<PRE id='???O' class='notdone'><div id='???Z' CLASS='items'>";
+  outstr += "<PRE class='notdone' id='???O'><div id='???Z' CLASS='items'>";
   outstr += "<div class='thecheck'><INPUT type='checkbox' id='???Q' onClick='isDone(this.id)'></div>";
-  outstr += "<div id='???X' onClick='isDone(this.id)' class='thetext'>$$$</DIV>";
+  outstr += "<div class='thetext' id='???X' onClick='isDone(this.id)' class='thetext'>$$$</DIV>";
   outstr += "<div class='thebutton'><button class='btn' id='???Y' onClick='deleteItem(this.id)' title='delete this item'><i class='icon icon-sm icon-jr-delthis'></i></button></div>";
   outstr += "</PRE>";
   outstr = outstr.replaceAll("???",thekey);
