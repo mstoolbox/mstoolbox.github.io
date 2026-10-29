@@ -57,6 +57,9 @@ A:hover {
 .notdone {
   text-decoration-line: none;
 }
+.floatright {
+  float: right;
+}
 dl {
   min-height: 20px;	
   overflow: hidden;
