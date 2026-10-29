@@ -89,7 +89,4 @@ dd {
   #container, #ftr {
     width: 100%;
   }
-  .icon {
-  --icon-size: 3em;
-  }
 }
