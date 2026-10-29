@@ -60,6 +60,9 @@ A:hover {
 .floatright {
   float: right;
 }
+.icon-sm {
+  padding: 2px;
+  }
 dl {
   min-height: 20px;	
   overflow: hidden;
