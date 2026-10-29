@@ -103,4 +103,10 @@ dd {
     width: calc(1em + 2px);
     height: calc(1em + 2px);
   }
+  dt {
+  padding-top: 10px;
+  }
+  dd {
+  padding-top: 10px;
+  }
 }
