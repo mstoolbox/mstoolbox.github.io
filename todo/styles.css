@@ -73,6 +73,12 @@ A:hover {
 .thecheck {
   display: table-cell;'
 }
+.thetext {
+  width: 100%;
+  display: table-cell;
+  float: none;
+  overflow: hidden;
+}
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
   body, #inp {
