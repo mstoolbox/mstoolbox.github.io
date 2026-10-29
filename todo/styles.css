@@ -51,7 +51,6 @@ A:hover {
 .items {
   display: table-row;
   background-color: #e0e0e0;
-  vertical-align: middle;
   width: 100%;
 }
 .isdone {
@@ -75,6 +74,7 @@ A:hover {
   display: table-cell;'
   height: 100%;
   vertical-align: middle;
+  margin-right: 5px;
 }
 .thetext {
   display: table-cell;
