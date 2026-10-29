@@ -60,9 +60,6 @@ A:hover {
 .floatright {
   float: right;
 }
-.icon-sm {
-  padding: 2px;
-  }
 dl {
   min-height: 20px;	
   overflow: hidden;
@@ -83,6 +80,10 @@ dd {
   cursor: pointer;
   border-radius: 5px;
   margin-right: 1em;
+}
+.btn.floatright {
+  float: right;
+  padding: 2px;
 }
 .btn:hover {
   background-color: RoyalBlue;
