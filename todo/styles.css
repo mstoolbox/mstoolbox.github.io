@@ -76,6 +76,7 @@ dd {
   padding: 5px;
   cursor: pointer;
   border-radius: 5px;
+  margin-right: 10px;
 }
 .btn:hover {
   background-color: RoyalBlue;
