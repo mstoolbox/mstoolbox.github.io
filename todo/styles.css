@@ -65,9 +65,11 @@ dt {
   float: left;
   clear: left;
   margin-right: 5px;
+  padding-top: 2px;
 }
 dd {
   margin-left: 0px;
+  padding-top: 2px;
 }
 .btn {
   background-color: DodgerBlue;
