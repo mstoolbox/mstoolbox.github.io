@@ -30,7 +30,7 @@ function displayItems() {
 function makeItem(thekey, theval) {
   let outstr = "";
   outstr += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items'>";
-  outstr += "<DL><DT><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></DT>";
+  outstr += "<DL style='vertical-align: top;'><DT><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></DT>";
   outstr += "<DD><SPAN id='???X' onClick='isDone(this.id)'>" + theval + "</SPAN>";
   outstr += "<button class='btn floatright' id='???Y' onClick='deleteItem(this.id)' title='add new task'><i class='icon icon-sm icon-jr-delthis'></i></button></DD>";
   outstr += "</DL></DIV></PRE>";
