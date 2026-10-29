@@ -73,10 +73,14 @@ A:hover {
 }
 .thecheck {
   display: table-cell;'
+  height: 100%;
+  vertical-align: middle;
 }
 .thetext {
   display: table-cell;
   width: 100%;
+  height: 100%;
+  vertical-align: middle;
   float: none;
   overflow: hidden;
 }
