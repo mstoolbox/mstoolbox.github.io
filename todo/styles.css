@@ -57,9 +57,6 @@ A:hover {
 .notdone {
   text-decoration-line: none;
 }
-.floatright {
-  float: right;
-}
 dl {
   min-height: 20px;	
   overflow: hidden;
@@ -83,7 +80,7 @@ dd {
 }
 .btn.floatright {
   float: right;
-  padding: 2px;
+  padding: 1px;
 }
 .btn:hover {
   background-color: RoyalBlue;
