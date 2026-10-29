@@ -37,8 +37,8 @@ function makeItem(thekey, theval) {
 	
   let outstr = "";
   outstr += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items' style='display: flex; align-items: center;'>";
-  outstr += "<SPAN><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></SPAN>";
-  outstr += "<SPAN id='???X' onClick='isDone(this.id)'>" + theval + "</SPAN>";
+  outstr += "<SPAN><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></SPAN>&nbsp;";
+  outstr += "<SPAN id='???X' onClick='isDone(this.id)'>" + theval + "</SPAN><SPAN WIDTH='100%'>&nbsp;</SPAN>";
   outstr += "<SPAN class='floatright'><button class='btn' id='???Y' onClick='deleteItem(this.id)' title='add new task'><i class='icon icon-sm icon-jr-delthis'></i></button></SPAN>";
   outstr += "</DIV></PRE>";
   return outstr.replaceAll("???",thekey);
