@@ -74,10 +74,13 @@ A:hover {
   display: table-cell;'
 }
 .thetext {
-  width: 100%;
   display: table-cell;
+  width: 100%;
   float: none;
   overflow: hidden;
+}
+.thebutton {
+  display: table-cell;
 }
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
