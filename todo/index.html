@@ -17,12 +17,12 @@ function displayItems() {
     if (localStorage.getItem(keys[i]).indexOf('\u200D') < 0) {
 	  document.getElementById(keys[i] + "O").className = 'notdone';
       document.getElementById(keys[i] + "O").style.opacity = "1.0";
-	  document.getElementById(keys[i]).checked = false;
+	  document.getElementById(keys[i] + "Q").checked = false;
 	}
     else {
       document.getElementById(keys[i] + "O").className = 'isdone';
       document.getElementById(keys[i] + "O").style.opacity = "0.4";
-	  document.getElementById(keys[i]).checked = true;
+	  document.getElementById(keys[i] + "Q").checked = true;
     }
   }
 }
