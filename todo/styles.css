@@ -77,7 +77,6 @@ A:hover {
   display: table-cell;'
   height: 100%;
   vertical-align: middle;
-  margin-right: 5px;
 }
 .thetext {
   display: table-cell;
@@ -86,6 +85,7 @@ A:hover {
   vertical-align: middle;
   float: none;
   overflow: hidden;
+  padding-left: 5px;
 }
 .thebutton {
   display: table-cell;
