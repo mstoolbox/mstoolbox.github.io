@@ -50,8 +50,8 @@ A:hover {
 }
 .items {
   background-color: #e0e0e0;
-  display: block;
   align-items: center;
+  display: table-row;
 }
 .isdone {
   text-decoration-line: line-through;
