@@ -94,7 +94,11 @@ dd {
     width: 100%;
   }
   .icon {
-    width: calc(2em + 10px);
-    height: calc(2em + 10px);
+    width: calc(2em + 5px);
+    height: calc(2em + 5px);
+  }
+  .ison-sm {
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
   }
 }
