@@ -70,6 +70,9 @@ A:hover {
 .btn:hover {
   background-color: RoyalBlue;
 }
+.btnspace {
+  margin-right: 10px;
+}
 .thecheck {
   display: table-cell;'
   height: 100%;
