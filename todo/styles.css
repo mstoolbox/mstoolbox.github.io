@@ -94,7 +94,7 @@ A:hover {
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
   body, #inp {
-    font-size: 14pt;
+    font-size: 18pt;
   }
   #container, #ftr {
     width: 100%;
@@ -103,7 +103,7 @@ A:hover {
     width: calc(2em + 5px);
     height: calc(2em + 5px);
   }
-  .icon-sm {
+  .icon-sm1 {
     width: calc(1.5em + 2px);
     height: calc(1.5em + 2px);
   }
