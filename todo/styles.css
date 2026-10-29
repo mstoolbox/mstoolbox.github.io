@@ -57,20 +57,6 @@ A:hover {
 .notdone {
   text-decoration-line: none;
 }
-dl {
-  min-height: 20px;	
-  overflow: hidden;
-}
-dt {
-  float: left;
-  clear: left;
-  margin-right: 5px;
-  padding-top: 2px;
-}
-dd {
-  margin-left: 0px;
-  padding-top: 2px;
-}
 .btn {
   background-color: DodgerBlue;
   border: none;
@@ -101,11 +87,5 @@ dd {
   .ison-sm {
     width: calc(1em + 2px);
     height: calc(1em + 2px);
-  }
-  dt {
-  padding-top: 10px;
-  }
-  dd {
-  padding-top: 10px;
   }
 }
