@@ -7,7 +7,7 @@ BODY {
 A:link, A:visited {
   color: #000080;
 }
-A:hover {
+A:hover, .thetext:hover {
   color: #0000ff;
 }
 #ttl {
