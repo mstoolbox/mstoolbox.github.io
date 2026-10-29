@@ -29,14 +29,14 @@ function displayItems() {
 
 function makeItem(thekey, theval) {
   let outstr1 = "";
-  outstr1 += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items' style='display: block; align-items: center; width:100%'>";
+  outstr1 += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items' style='display: block; align-items: center; width:100%; border: 1px solid red;'>";
   outstr1 += "<DL><DT><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></DT>";
   outstr1 += "<DD><SPAN id='???X' onClick='isDone(this.id)'>" + theval + "</SPAN>";
   outstr1 += "<button class='btn floatright' id='???Y' onClick='deleteItem(this.id)' title='add new task'><i class='icon icon-sm icon-jr-delthis'></i></button></DD>";
   outstr1 += "</DL></DIV></PRE>";
 	
   let outstr = "";
-  outstr += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items' style='display: flex; align-items: center;'>";
+  outstr += "<PRE id='???O' class='notdone'><DIV id='???Z' CLASS='items' style='display: block; align-items: center; width:100%; border: 1px solid red;'>";
   outstr += "<SPAN><INPUT type='checkbox' id='???' onClick='isDone(this.id)'></SPAN>&nbsp;";
   outstr += "<SPAN id='???X' onClick='isDone(this.id)'>" + theval + "</SPAN><SPAN WIDTH='100%'>&nbsp;</SPAN>";
   outstr += "<SPAN class='floatright'><button class='btn' id='???Y' onClick='deleteItem(this.id)' title='add new task'><i class='icon icon-sm icon-jr-delthis'></i></button></SPAN>";
