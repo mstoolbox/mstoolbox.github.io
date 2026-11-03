@@ -2,18 +2,21 @@ BODY {
   font-family: verdana,tahoma,arial,helvetica;
   font-size: 11pt;
   color: #000080;
-  background-color: #cccccc;
+  background-color: #ccc;
 }
 A:link, A:visited {
-  color: #000080;
+  color: #008;
 }
-A:hover, .thetext:hover {
-  color: #0000ff;
+.myhr {
+  border-bottom: 1px solid #aaa;
+}
+#ftr A:hover, .thetext:hover {
+  color: #00f;
 }
 #ttl {
   width: 100%;
   height: 25px;
-  background-color: #eeeeee;
+  background-color: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +35,7 @@ A:hover, .thetext:hover {
   width: 400px;
   min-height: 250px;
   margin: 0 auto;
-  background-color: #eeeeee;
+  background-color: #eee;
   padding: 5px;
   overflow: hidden;
 }
@@ -71,8 +74,14 @@ A:hover, .thetext:hover {
 .btn:hover {
   background-color: RoyalBlue;
 }
-.btnspace {
-  margin-right: 15px;
+.menubtn {
+  margin-left: auto;
+  float: right;
+  order: 2;
+  background-color: #f66;
+}
+.menubtn:hover {
+  background-color: #f44;
 }
 .thecheck {
   display: table-cell;'
@@ -91,6 +100,34 @@ A:hover, .thetext:hover {
 .thebutton {
   display: table-cell;
   float: right;
+}
+#buttonbar {
+  display: flex;
+  align-items: center;
+}
+#themenu a:hover {
+  background-color: #d0d0d0;
+}
+#themenu {
+  position: relative;
+  right: 200px;
+  width: 200px;
+  z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+  background-color: #ddd;
+  border: 1px solid #aaa;
+  visibility: hidden;
+}
+#themenu A {
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+}
+#placeholder {
+  position: relative;
+  width:0;
+  height:0;
+  float: right;
+  clear: both;
 }
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
