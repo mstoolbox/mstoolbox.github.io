@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="icons.css">
 <link rel="stylesheet" href="styles.css">
 <script>
+var deletedList = [];
+
 function displayItems() {
   let outstr = "";
   let keys = sortKeys(localStorage);
@@ -39,16 +41,24 @@ function makeItem(thekey, theval) {
 }
 
 function delAll() {
+  let keys = Object.keys(localStorage);
+  deletedList = [];
+  for (let i = 0; i < keys.length; i++) {
+    let value = localStorage.getItem(keys[i]);
+	deletedList.push([keys[i],value]);
+    }
   localStorage.clear();
   displayItems();
 }
 
 function delDone() {
   let keys = Object.keys(localStorage);
+  deletedList = [];
   for (let i = 0; i < keys.length; i++) {
     let value = localStorage.getItem(keys[i]);
     if (value.indexOf('\u200D') > 0) {
-      localStorage.removeItem(keys[i]);
+	  deletedList.push([keys[i],value]);
+	  localStorage.removeItem(keys[i]);
     }
   }
   displayItems();
@@ -65,8 +75,22 @@ function addItem() {
 
 function deleteItem(what) {
   what = what.replace(/[^0-9]/g,"");
+  let value = localStorage.getItem(what);
+  deletedList = [];
+  deletedList.push([what,value]);
   localStorage.removeItem(what);
   displayItems();
+}
+
+function restoreItems() {
+  let key = "";
+  let value = "";
+  for (let i = 0; i < deletedList.length; i++) {
+    let [key, value] = deletedList[i];
+	localStorage.setItem(key,value);
+    displayItems();
+  }
+  deletedList = [];
 }
 
 function isDone(what) {
@@ -91,24 +115,40 @@ function sortKeys(obj) {
   });
   return keys;
 }
+
+function showMenu() {
+  document.getElementById("themenu").style.visibility = "visible";
+}
+
+function hideMenu() {
+  document.getElementById("themenu").style.visibility = "hidden";
+}
 </script>
 </HEAD>
 <BODY>
+
 <DIV id="ttl">ToDo list</DIV>
-	
 <DIV id="container">
-<DIV style="display: flex; align-items: center;">
+<DIV id="placeholder"><DIV id="themenu">
+<A HREF="#" onClick='delDone();return false;'><i class="icon icon-jr-clean icon-sm"></i> delete checked items</A>
+<A HREF="#" class="myhr" onClick='delAll();return false;'><i class="icon icon-jr-delete icon-sm"></i> delete all items</A>
+<A HREF="#" class="myhr" onClick='restoreItems();return false;'><i class="icon icon-jr-undo icon-sm"></i> undo last delete</A>
+<A HREF="#" onClick='hideMenu();return false;'><i class="icon icon-jr-exit icon-sm"></i> exit menu</A>
+</DIV></DIV>
+<DIV id="buttonbar">
 <textarea id="inp" placeholder="Enter task..." maxlength="50"></textarea>
-<button class="btn btnspace" onClick="addItem()" title="add new task"><i class="icon icon-jr-add"></i></button> &nbsp;
-<button class="btn btnspace" onClick="delDone()" title="delete tasks done"><i class="icon icon-jr-clean"></i></button> &nbsp;
-<button class="btn" onClick="delAll()" title="delete all tasks"><i class="icon icon-jr-delete"></i></button></DIV>
+<button class="btn" onClick="addItem()" title="add new task"><i class="icon icon-jr-add"></i></button>
+<button class="btn menubtn" onClick="showMenu()" title="menu"><i class="icon icon-jr-menu"></i></button>
+</DIV>
 
 <DIV id="tasks"></DIV>
 </DIV> <!-- container -->
 
 <DIV id="ftr">written by Jef Rozenski<BR><A HREF='https://mstoolbox.github.io'>Masspec Toolbox</A></DIV>
+
 <script>
 displayItems();
 </script>
-</body>
-</html>
+
+</BODY>
+</HTML>
