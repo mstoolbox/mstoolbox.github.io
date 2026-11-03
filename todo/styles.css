@@ -110,9 +110,9 @@ A:link, A:visited {
 }
 #themenu {
   position: relative;
-  right: 200px;
-  width: 200px;
-  z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+  right: 250px;
+  width: 250px;
+  z-index: 10;
   background-color: #ddd;
   border: 1px solid #aaa;
   visibility: hidden;
