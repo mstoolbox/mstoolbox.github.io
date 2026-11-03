@@ -18,14 +18,20 @@ function displayItems() {
   for (let i = 0; i < keys.length; i++) {
     if (localStorage.getItem(keys[i]).indexOf('\u200D') < 0) {
 	  document.getElementById(keys[i] + "O").className = 'notdone';
-      document.getElementById(keys[i] + "O").style.opacity = "1.0";
+      document.getElementById(keys[i] + "O").style.opacity = '1.0';
 	  document.getElementById(keys[i] + "Q").checked = false;
 	}
     else {
       document.getElementById(keys[i] + "O").className = 'isdone';
-      document.getElementById(keys[i] + "O").style.opacity = "0.4";
+      document.getElementById(keys[i] + "O").style.opacity = '0.4';
 	  document.getElementById(keys[i] + "Q").checked = true;
     }
+  }
+  if (deletedList.length == 0) {
+  	document.getElementById("undomenu").className = 'myhr inactive';
+  }
+  else {
+    document.getElementById("undomenu").className = 'myhr active';
   }
 }
 
@@ -88,9 +94,9 @@ function restoreItems() {
   for (let i = 0; i < deletedList.length; i++) {
     let [key, value] = deletedList[i];
 	localStorage.setItem(key,value);
-    displayItems();
   }
   deletedList = [];
+  displayItems();
 }
 
 function isDone(what) {
@@ -132,7 +138,7 @@ function hideMenu() {
 <DIV id="placeholder"><DIV id="themenu">
 <A HREF="#" onClick='delDone();return false;'><i class="icon icon-jr-clean icon-sm"></i> delete checked items</A>
 <A HREF="#" class="myhr" onClick='delAll();return false;'><i class="icon icon-jr-delete icon-sm"></i> delete all items</A>
-<A HREF="#" class="myhr" onClick='restoreItems();return false;'><i class="icon icon-jr-undo icon-sm"></i> undo last delete</A>
+<A HREF="#" class="myhr inactive" onClick='restoreItems();return false;' id='undomenu'><i class="icon icon-jr-undo icon-sm"></i> undo last delete</A>
 <A HREF="#" onClick='hideMenu();return false;'><i class="icon icon-jr-exit icon-sm"></i> exit menu</A>
 </DIV></DIV>
 <DIV id="buttonbar">
