@@ -110,9 +110,9 @@ A:link, A:visited {
 }
 #themenu {
   position: relative;
-  right: 250px;
-  width: 250px;
-  z-index: 10;
+  right: 200px;
+  width: 200px;
+  z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
   background-color: #ddd;
   border: 1px solid #aaa;
   visibility: hidden;
@@ -128,6 +128,14 @@ A:link, A:visited {
   height:0;
   float: right;
   clear: both;
+}
+.active {
+  pointer-events: default;
+  opacity: 1.0;
+}
+.inactive {
+  pointer-events: none;
+  opacity: 0.4;
 }
 /* Responsive Overrides for Smartphones */
 @media only screen and (max-width: 600px) {
