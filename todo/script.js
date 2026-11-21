@@ -32,8 +32,8 @@ function makeItem(thekey, theval) {
   outstr += "<PRE class='notdone' id='???O'><div id='???Z' CLASS='items'>";
   outstr += "<div class='thecheck'><INPUT type='checkbox' id='???Q' onClick='isDone(this.id)'></div>";
   outstr += "<div class='thetext' id='???X' onClick='isDone(this.id)' class='thetext'>$$$</DIV>";
-  outstr += "<div class='thebutton'><button class='btn' id='???C' onClick='deleteItem(this.id)' title='delete this item'><i class='icon icon-sm icon-jr-delthis'></i></button></div>";
-  outstr += "<div class='thebutton'><button class='btn' id='???Y' onClick='editItem(this.id)' title='edit this item'><i class='icon icon-sm icon-jr-editthis'></i></button></div>";
+  outstr += "<div class='thebutton'><button class='btn btn1' id='???C' onClick='deleteItem(this.id)' title='delete this item'><i class='icon icon-sm icon-jr-delthis'></i></button></div>";
+  outstr += "<div class='thebutton'><button class='btn btn2' id='???Y' onClick='editItem(this.id)' title='edit this item'><i class='icon icon-sm icon-jr-editthis'></i></button></div>";
   outstr += "</PRE>";
   outstr = outstr.replaceAll("???",thekey);
   return outstr.replaceAll("$$$",theval);
