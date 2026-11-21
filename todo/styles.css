@@ -71,6 +71,7 @@ A:link, A:visited {
   cursor: pointer;
   border-radius: 5px;
   float: right;
+  margin-left: 10px;
 }
 .btn:hover {
   background-color: RoyalBlue;
