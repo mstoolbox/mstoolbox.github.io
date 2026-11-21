@@ -75,6 +75,9 @@ A:link, A:visited {
 .btn:hover {
   background-color: RoyalBlue;
 }
+.btncont {
+  display: flex;
+}
 .menubtn {
   margin-left: auto;
   float: right;
