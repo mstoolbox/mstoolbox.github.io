@@ -70,6 +70,7 @@ A:link, A:visited {
   padding: 5px;
   cursor: pointer;
   border-radius: 5px;
+  float: right;
 }
 .btn:hover {
   background-color: RoyalBlue;
