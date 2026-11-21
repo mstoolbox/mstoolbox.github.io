@@ -1,4 +1,5 @@
 var deletedList = [];
+var editing = 0;
 
 function displayItems() {
   let outstr = "";
@@ -65,9 +66,18 @@ function delDone() {
 
 function addItem() {
   let thetask = document.getElementById("inp").value;
+  let thekey = 0;
   if (thetask.length > 0) {
-    localStorage.setItem(Date.now(),document.getElementById("inp").value);
+	if (editing > 0) {
+	  thekey = editing;
+      localStorage.removeItem(thekey);
+	}
+	else {
+	  thekey = Date.now();
+	}
+    localStorage.setItem(thekey,document.getElementById("inp").value);
 	document.getElementById("inp").value = "";
+	editing = 0;
     displayItems();
   }
 }
@@ -85,8 +95,9 @@ function editItem(what) {
   what = what.replace(/[^0-9]/g,"");
   let value = localStorage.getItem(what);
   document.getElementById("inp").value = value;
+  editing = what;
 //  localStorage.setItem(Date.now(),document.getElementById("inp").value);
-  displayItems();
+//  displayItems();
 }
 
 function restoreItems() {
