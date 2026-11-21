@@ -92,12 +92,15 @@ function deleteItem(what) {
 }
 
 function editItem(what) {
+  if (editing > 0) {
+	editing = 0;
+    document.getElementById("inp").value = "";
+	return
+  }
   what = what.replace(/[^0-9]/g,"");
   let value = localStorage.getItem(what);
   document.getElementById("inp").value = value;
   editing = what;
-//  localStorage.setItem(Date.now(),document.getElementById("inp").value);
-//  displayItems();
 }
 
 function restoreItems() {
