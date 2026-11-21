@@ -81,6 +81,15 @@ function deleteItem(what) {
   displayItems();
 }
 
+function editItem(what) {
+  what = what.replace(/[^0-9]/g,"");
+  let value = localStorage.getItem(what);
+  deletedList = [];
+  deletedList.push([what,value]);
+  localStorage.removeItem(what);
+  displayItems();
+}
+
 function restoreItems() {
   let key = "";
   let value = "";
