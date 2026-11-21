@@ -84,9 +84,8 @@ function deleteItem(what) {
 function editItem(what) {
   what = what.replace(/[^0-9]/g,"");
   let value = localStorage.getItem(what);
-  deletedList = [];
-  deletedList.push([what,value]);
-  localStorage.removeItem(what);
+  document.getElementById("inp").value = value;
+//  localStorage.setItem(Date.now(),document.getElementById("inp").value);
   displayItems();
 }
 
