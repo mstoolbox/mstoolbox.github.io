@@ -134,7 +134,7 @@ A:link, A:visited {
   float: right;
   clear: both;
 }
-.active {
+.active1 {
   pointer-events: default;
   opacity: 1.0;
 }
