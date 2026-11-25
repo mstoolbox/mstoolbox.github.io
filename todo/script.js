@@ -138,6 +138,7 @@ function sortKeys(obj) {
 }
 
 function showMenu() {
+  console.log(document.getElementById("deldone").classList);
   if (localStorage.length > 0) {
 	document.getElementById("deldone").classList.remove("inactive");
 	document.getElementById("delall").classList.remove("inactive");	  	  
