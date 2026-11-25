@@ -148,6 +148,7 @@ function showMenu() {
 	document.getElementById("delall").classList.add("inactive");
   }
   if (deletedList.length == 0) {
+	  	document.getElementById("undomenu").classList.add("inactive");
 //  	document.getElementById("undomenu").classList.add("inactive");
   }
   else {
