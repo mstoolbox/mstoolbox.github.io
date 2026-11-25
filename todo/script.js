@@ -138,7 +138,6 @@ function sortKeys(obj) {
 }
 
 function showMenu() {
-	  console.log(document.getElementById("undomenu").classList);
   if (localStorage.length > 0) {
 	document.getElementById("deldone").classList.remove("inactive");
 	document.getElementById("delall").classList.remove("inactive");	  	  
@@ -149,10 +148,9 @@ function showMenu() {
   }
   if (deletedList.length == 0) {
 	  	document.getElementById("undomenu").classList.add("inactive");
-//  	document.getElementById("undomenu").classList.add("inactive");
   }
   else {
-//	document.getElementById("undomenu").classList.remmove("inactive");
+	document.getElementById("undomenu").classList.remove("inactive");
   }
   document.getElementById("themenu").style.visibility = "visible";
 }
