@@ -20,12 +20,12 @@ function displayItems() {
 	  document.getElementById(keys[i] + "Q").checked = true;
     }
   }
-  if (deletedList.length == 0) {
-  	document.getElementById("undomenu").className = 'myhr inactive';
-  }
-  else {
-    document.getElementById("undomenu").className = 'myhr active';
-  }
+//  if (deletedList.length == 0) {
+//  	document.getElementById("undomenu").className = 'myhr inactive';
+//  }
+//  else {
+//    document.getElementById("undomenu").className = 'myhr active';
+//  }
 }
 
 function makeItem(thekey, theval) {
@@ -138,6 +138,16 @@ function sortKeys(obj) {
 }
 
 function showMenu() {
+  if (localStorage.length > 0) {
+  }
+  else {
+  }
+  if (deletedList.length == 0) {
+  	document.getElementById("undomenu").classList.add("inactive");
+  }
+  else {
+	 document.getElementById("undomenu").classList.remmove("inactive");
+  }
   document.getElementById("themenu").style.visibility = "visible";
 }
 
