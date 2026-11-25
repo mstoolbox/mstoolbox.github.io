@@ -140,7 +140,7 @@ function sortKeys(obj) {
 function showMenu() {
   if (localStorage.length > 0) {
 	document.getElementById("deldone").classList.remove("inactive");
-	document.getElementById("dellall").classList.remove("inactive");	  	  
+	document.getElementById("delall").classList.remove("inactive");	  	  
   }
   else {
 	document.getElementById("deldone").classList.add("inactive");
