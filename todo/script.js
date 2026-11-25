@@ -20,12 +20,6 @@ function displayItems() {
 	  document.getElementById(keys[i] + "Q").checked = true;
     }
   }
-//  if (deletedList.length == 0) {
-//  	document.getElementById("undomenu").className = 'myhr inactive';
-//  }
-//  else {
-//    document.getElementById("undomenu").className = 'myhr active';
-//  }
 }
 
 function makeItem(thekey, theval) {
